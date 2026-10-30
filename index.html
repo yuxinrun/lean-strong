@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title data-i18n="meta.home.title">轻与壮 · 一份能照着做的科学减脂与增肌指南</title>
+<meta name="description" content="用大白话讲清减脂减重与增肌增重的科学做法：热量缺口、蛋白质、力量训练、睡眠与平台期。附计算器、图表与可打印清单。" data-i18n-content="meta.home.desc" data-zh-content="用大白话讲清减脂减重与增肌增重的科学做法：热量缺口、蛋白质、力量训练、睡眠与平台期。附计算器、图表与可打印清单。">
+<meta name="theme-color" content="#f7f3ea" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#121110" media="(prefers-color-scheme: dark)">
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem('ls-theme');
+      if (t !== 'light' && t !== 'dark') {
+        t = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+      document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+  })();
+</script>
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/pages.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%231f5c4b'/%3E%3Ccircle cx='16' cy='16' r='7' fill='none' stroke='%23f7f3ea' stroke-width='3'/%3E%3C/svg%3E">
+</head>
+<body data-page="home">
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html" aria-label="轻与壮">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span class="brand-name" data-i18n="brand.name">轻与壮</span>
+      <span class="brand-sub" data-i18n="brand.sub">Lean &amp; Strong</span>
+    </a>
+
+    <nav class="nav" id="siteNav" aria-label="主导航">
+      <a href="index.html" class="is-active" data-i18n="nav.home">首页</a>
+      <a href="fat-loss.html" data-i18n="nav.fat">减脂减重</a>
+      <a href="muscle-gain.html" data-i18n="nav.muscle">增肌增重</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="seg" id="langToggle" type="button" data-i18n-aria="nav.langAria"
+              data-zh-aria="切换语言" aria-label="切换语言">
+        <span data-lang-label="zh" class="is-on">中</span>
+        <span data-lang-label="en">EN</span>
+      </button>
+      <button class="icon-btn" id="themeToggle" type="button" aria-pressed="false"
+              data-i18n-aria="nav.themeAria" data-zh-aria="切换深色模式" aria-label="切换深色模式">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="4.2"></circle>
+          <path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.2 5.2l1.4 1.4M17.4 17.4l1.4 1.4M18.8 5.2l-1.4 1.4M6.6 17.4l-1.4 1.4"></path>
+        </svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true">
+          <path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z"></path>
+        </svg>
+      </button>
+      <button class="icon-btn nav-toggle" id="navToggle" type="button" aria-expanded="false"
+              data-i18n-aria="nav.menuAria" data-zh-aria="打开菜单" aria-label="打开菜单">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+          <path d="M4 7h16M4 12h16M4 17h16"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <span class="eyebrow" data-i18n="home.hero.eyebrow">2 篇长文 · 中英双语 · 无需注册</span>
+        <h1>
+          <span data-i18n="home.hero.h1a">把体重交给方法</span><br>
+          <span data-i18n="home.hero.h1b">而不是意志力</span><span class="mark" data-i18n="home.hero.h1c">。</span>
+        </h1>
+        <p class="lead" data-i18n="home.hero.lead">
+          这份指南只做一件事：把「减脂」和「增肌」这两件被讲得最乱的事，拆成你明天早上就能照做的步骤。
+          没有玄学，没有术语墙，每条关键结论都可追溯到论文。
+        </p>
+        <div class="hero-cta">
+          <a class="btn btn--primary" href="fat-loss.html">
+            <span data-i18n="home.hero.cta1">先读减脂指南</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"></path></svg>
+          </a>
+          <a class="btn btn--ghost" href="muscle-gain.html">
+            <span data-i18n="home.hero.cta2">先读增肌指南</span>
+          </a>
+        </div>
+        <ul class="hero-facts">
+          <li data-i18n="home.hero.f1">全部结论可查原文</li>
+          <li data-i18n="home.hero.f2">2 个热量计算器</li>
+          <li data-i18n="home.hero.f3">中英双语 · 日夜双主题</li>
+          <li data-i18n="home.hero.f4">完全免费</li>
+        </ul>
+      </div>
+
+      <div class="hero-art" aria-hidden="true">
+        <svg viewBox="0 0 480 480" role="presentation">
+          <rect x="34" y="30" width="412" height="420" rx="44" style="fill:var(--bg-3)"></rect>
+          <circle class="pulse" cx="200" cy="190" r="118" style="fill:var(--brand)"></circle>
+
+          <!-- 点阵：左上与右下各一小阵 -->
+          <g style="fill:var(--line-strong)" opacity=".55">
+            <circle cx="76" cy="108" r="2.4"></circle><circle cx="96" cy="108" r="2.4"></circle><circle cx="116" cy="108" r="2.4"></circle>
+            <circle cx="76" cy="128" r="2.4"></circle><circle cx="96" cy="128" r="2.4"></circle><circle cx="116" cy="128" r="2.4"></circle>
+            <circle cx="366" cy="412" r="2.4"></circle><circle cx="386" cy="412" r="2.4"></circle><circle cx="406" cy="412" r="2.4"></circle>
+            <circle cx="366" cy="432" r="2.4"></circle><circle cx="386" cy="432" r="2.4"></circle><circle cx="406" cy="432" r="2.4"></circle>
+          </g>
+
+          <!-- 装饰 -->
+          <circle cx="398" cy="150" r="16" style="fill:var(--fat)" opacity=".22"></circle>
+          <circle cx="312" cy="100" r="5" style="fill:var(--brand)" opacity=".6"></circle>
+          <circle cx="128" cy="320" r="9" style="fill:var(--gold)" opacity=".35"></circle>
+          <circle cx="356" cy="246" r="12" fill="none" stroke-width="2" style="stroke:var(--line-strong)" opacity=".5"></circle>
+
+          <!-- 餐盘（蔬菜 / 蛋白 / 主食 三分法） -->
+          <g class="plate">
+            <circle cx="200" cy="190" r="100" style="fill:var(--bg-2);stroke:var(--line)" stroke-width="2"></circle>
+            <g class="spin">
+              <circle cx="200" cy="190" r="66" fill="none" stroke-width="30" stroke-dasharray="207.3 414.7"
+                      style="stroke:var(--brand)" transform="rotate(-90 200 190)"></circle>
+              <circle cx="200" cy="190" r="66" fill="none" stroke-width="30" stroke-dasharray="103.7 414.7" stroke-dashoffset="-207.3"
+                      style="stroke:var(--fat)" transform="rotate(-90 200 190)"></circle>
+              <circle cx="200" cy="190" r="66" fill="none" stroke-width="30" stroke-dasharray="103.7 414.7" stroke-dashoffset="-311"
+                      style="stroke:var(--gold)" transform="rotate(-90 200 190)"></circle>
+            </g>
+            <circle cx="200" cy="190" r="36" style="fill:var(--bg-2)"></circle>
+            <path d="M188,190 h24 M200,178 v24" fill="none" stroke-width="2" stroke-linecap="round" style="stroke:var(--line-strong)"></path>
+          </g>
+
+          <!-- 步数柱 -->
+          <g>
+            <rect class="rise rise--1" x="84" y="366" width="20" height="30" rx="7" style="fill:var(--line-strong)"></rect>
+            <rect class="rise rise--2" x="110" y="350" width="20" height="46" rx="7" style="fill:var(--brand)" opacity=".55"></rect>
+            <rect class="rise rise--3" x="136" y="334" width="20" height="62" rx="7" style="fill:var(--line-strong)"></rect>
+            <rect class="rise rise--4" x="162" y="318" width="20" height="78" rx="7" style="fill:var(--brand)"></rect>
+          </g>
+
+          <!-- 哑铃：外层只定位，内层做动画，避免 CSS transform 覆盖定位 -->
+          <g transform="translate(350,352) rotate(-14) scale(.82)">
+            <g class="node node--dumbbell">
+              <g class="float">
+                <rect x="-52" y="-6" width="104" height="12" rx="6" style="fill:var(--ink)" opacity=".85"></rect>
+                <rect x="-72" y="-27" width="17" height="54" rx="7" style="fill:var(--ink)" opacity=".85"></rect>
+                <rect x="55" y="-27" width="17" height="54" rx="7" style="fill:var(--ink)" opacity=".85"></rect>
+                <rect x="-47" y="-35" width="14" height="70" rx="6" style="fill:var(--muscle)"></rect>
+                <rect x="33" y="-35" width="14" height="70" rx="6" style="fill:var(--muscle)"></rect>
+              </g>
+            </g>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- 两条路线 -->
+  <section class="section" id="paths">
+    <div class="wrap">
+      <div class="section-head" data-reveal>
+        <span class="eyebrow" data-i18n="home.paths.eyebrow">两条完全不同的路</span>
+        <h2 data-i18n="home.paths.h2">减脂和增肌，吃法几乎是相反的</h2>
+        <p data-i18n="home.paths.p">
+          一个要你少摄入，一个要你多摄入；一个追求体重下降，一个追求体重缓慢上升。
+          所以它们被写成了两篇独立的长文——先选一个，别同时追。
+        </p>
+      </div>
+
+      <div class="paths">
+        <a class="path-card theme-fat" href="fat-loss.html" data-reveal>
+          <div class="path-card__top">
+            <span class="chip chip--fat" data-i18n="home.fat.chip">路线 01 · 热量缺口</span>
+            <span class="path-card__idx">FAT LOSS</span>
+          </div>
+          <h3>
+            <small data-i18n="home.fat.small">Fat loss</small>
+            <span data-i18n="home.fat.title">减脂减重</span>
+          </h3>
+          <p data-i18n="home.fat.desc">
+            目标不是「掉秤」，而是掉脂肪、留住肌肉。从热量缺口怎么算、外卖怎么点，
+            到平台期怎么破、减完怎么不反弹，一条线走完。
+          </p>
+          <div class="path-card__metrics">
+            <div class="path-metric">
+              <div class="path-metric__num" data-i18n="home.fat.m1n">0.5–1%</div>
+              <div class="path-metric__label" data-i18n="home.fat.m1l">每周体重下降幅度</div>
+            </div>
+            <div class="path-metric">
+              <div class="path-metric__num" data-i18n="home.fat.m2n">1.6–2.2 g</div>
+              <div class="path-metric__label" data-i18n="home.fat.m2l">每公斤体重蛋白质</div>
+            </div>
+            <div class="path-metric">
+              <div class="path-metric__num" data-i18n="home.fat.m3n">9 节</div>
+              <div class="path-metric__label" data-i18n="home.fat.m3l">含计算器与 4 周清单</div>
+            </div>
+          </div>
+          <span class="path-card__go">
+            <span data-i18n="home.fat.go">读减脂指南</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"></path></svg>
+          </span>
+        </a>
+
+        <a class="path-card theme-muscle" href="muscle-gain.html" data-reveal data-delay="90">
+          <div class="path-card__top">
+            <span class="chip chip--muscle" data-i18n="home.muscle.chip">路线 02 · 渐进超负荷</span>
+            <span class="path-card__idx">MUSCLE GAIN</span>
+          </div>
+          <h3>
+            <small data-i18n="home.muscle.small">Muscle gain</small>
+            <span data-i18n="home.muscle.title">增肌增重</span>
+          </h3>
+          <p data-i18n="home.muscle.desc">
+            增重不等于增肌。什么时候该加片杠铃、一天吃几克蛋白、每个部位练几组才够——
+            把新手最容易走的三条弯路一次讲清。
+          </p>
+          <div class="path-card__metrics">
+            <div class="path-metric">
+              <div class="path-metric__num" data-i18n="home.muscle.m1n">1–2 kg</div>
+              <div class="path-metric__label" data-i18n="home.muscle.m1l">新手前 3 个月可增肌肉</div>
+            </div>
+            <div class="path-metric">
+              <div class="path-metric__num" data-i18n="home.muscle.m2n">10–20 组</div>
+              <div class="path-metric__label" data-i18n="home.muscle.m2l">每肌群每周训练量</div>
+            </div>
+            <div class="path-metric">
+              <div class="path-metric__num" data-i18n="home.muscle.m3n">9 节</div>
+              <div class="path-metric__label" data-i18n="home.muscle.m3l">含两套训练模板</div>
+            </div>
+          </div>
+          <span class="path-card__go">
+            <span data-i18n="home.muscle.go">读增肌指南</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"></path></svg>
+          </span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 如果只记住五件事 -->
+  <section class="section" id="five">
+    <div class="wrap">
+      <div class="section-head" data-reveal>
+        <span class="eyebrow" data-i18n="home.five.eyebrow">时间不够的话</span>
+        <h2 data-i18n="home.five.h2">如果只记住五件事</h2>
+        <p data-i18n="home.five.p">
+          从两篇长文里挑出的五个高杠杆动作。它们不花钱、不需要天赋，但决定了九成的结果。
+        </p>
+      </div>
+
+      <div class="five" data-reveal>
+        <div class="five-item">
+          <div class="five-item__idx">01</div>
+          <div>
+            <h3 data-i18n="home.five.i1t">先选一个目标，做满 8 周</h3>
+            <p data-i18n="home.five.i1d">减脂和增肌需要相反的饮食条件。同时追两个目标，通常两个都半途而废。先减脂还是先增肌，取决于你现在的体脂和训练年限——两篇文章开头都有判断方法。</p>
+          </div>
+        </div>
+        <div class="five-item">
+          <div class="five-item__idx">02</div>
+          <div>
+            <h3 data-i18n="home.five.i2t">算一次数，然后就不必天天算</h3>
+            <p data-i18n="home.five.i2d">热量和蛋白质只需要估个大概，10% 的误差不会毁掉任何计划；完全不算，才会。用计算器算一次，把它变成一个月的固定参考值。</p>
+          </div>
+        </div>
+        <div class="five-item">
+          <div class="five-item__idx">03</div>
+          <div>
+            <h3 data-i18n="home.five.i3t">不管减脂还是增肌，都要练力量</h3>
+            <p data-i18n="home.five.i3d">减脂期力量训练是「别把肌肉一起减掉」的保险；增肌期它是唯一能真正让肌肉变大的刺激。每周 2–3 次、每次 40 分钟，就已经够用。</p>
+          </div>
+        </div>
+        <div class="five-item">
+          <div class="five-item__idx">04</div>
+          <div>
+            <h3 data-i18n="home.five.i4t">睡够，比多练一小时更管用</h3>
+            <p data-i18n="home.five.i4d">同样限制热量，睡眠被压缩的人减掉的脂肪明显更少、掉的肌肉更多。睡眠不是「有空再管」的加分项，它在你控制饮食时直接改写结果。</p>
+          </div>
+        </div>
+        <div class="five-item">
+          <div class="five-item__idx">05</div>
+          <div>
+            <h3 data-i18n="home.five.i5t">让方案活过 6 个月</h3>
+            <p data-i18n="home.five.i5d">能坚持的普通方案，永远赢过坚持不了的完美方案。绝大多数「反弹」不是代谢坏了，而是回到原来的吃法——所以终点不是「减完」，是换一套能过一辈子的默认设置。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="five-foot" data-reveal>
+        <span data-i18n="home.five.foot">每条背后的数据与出处，都写在对应文章的文末。</span>
+        <a class="arrow-link" href="#toolbox">
+          <span data-i18n="home.five.link">直接看能用的工具</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 工具箱 -->
+  <section class="section" id="toolbox">
+    <div class="wrap">
+      <div class="section-head" data-reveal>
+        <span class="eyebrow" data-i18n="home.tools.eyebrow">拿来就能用</span>
+        <h2 data-i18n="home.tools.h2">四个今天就能上手的工具</h2>
+        <p data-i18n="home.tools.p">不用注册，不用下载，打开就能算、能抄、能勾。</p>
+      </div>
+
+      <div class="toolbox">
+        <a class="tool-card theme-fat" href="fat-loss.html#calculator" data-reveal>
+          <span class="tool-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="3"></rect><path d="M8 7h8M8 11h3M8 15h3M15 11v4"></path></svg>
+          </span>
+          <h3 data-i18n="home.tools.t1">减脂热量计算器</h3>
+          <p data-i18n="home.tools.d1">输入身高体重，得到维持热量、每日目标、蛋白质克数与预期掉重速度。</p>
+          <span class="tool-card__k" data-i18n="home.tools.k1">约 1 分钟</span>
+        </a>
+        <a class="tool-card theme-muscle" href="muscle-gain.html#calculator" data-reveal data-delay="70">
+          <span class="tool-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.5 7.5v9M17.5 7.5v9M3.5 10v4M20.5 10v4M6.5 12h11"></path></svg>
+          </span>
+          <h3 data-i18n="home.tools.t2">增肌盈余计算器</h3>
+          <p data-i18n="home.tools.d2">按 5%–15% 的盈余算出该吃多少，避免「增肌」变成「增肚」。</p>
+          <span class="tool-card__k" data-i18n="home.tools.k2">约 1 分钟</span>
+        </a>
+        <a class="tool-card theme-muscle" href="muscle-gain.html#training" data-reveal data-delay="140">
+          <span class="tool-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"></rect><path d="M3 10h18M8 3v4M16 3v4M8 14h3M8 17.5h6"></path></svg>
+          </span>
+          <h3 data-i18n="home.tools.t3">两套训练模板</h3>
+          <p data-i18n="home.tools.d3">一周 3 天全身、一周 4 天上下肢。含组数、次数、休息时间，照抄即可。</p>
+          <span class="tool-card__k" data-i18n="home.tools.k3">可直接打印</span>
+        </a>
+        <a class="tool-card theme-fat" href="fat-loss.html#plan" data-reveal data-delay="210">
+          <span class="tool-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h10l2 3h4v9H4z"></path><path d="M8 13l2.5 2.5L15 11"></path></svg>
+          </span>
+          <h3 data-i18n="home.tools.t4">4 周起步清单</h3>
+          <p data-i18n="home.tools.d4">12 条具体动作，勾选状态会保存在你自己的浏览器里，随时回来看。</p>
+          <span class="tool-card__k" data-i18n="home.tools.k4">可勾选保存</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 三种读法 -->
+  <section class="section" id="readways">
+    <div class="wrap">
+      <div class="section-head" data-reveal>
+        <span class="eyebrow" data-i18n="home.read.eyebrow">怎么读</span>
+        <h2 data-i18n="home.read.h2">按你现在的位置，挑一条入口</h2>
+      </div>
+      <div class="readways">
+        <div class="readway" data-reveal>
+          <div class="readway__k" data-i18n="home.read.k1">如果你体脂偏高</div>
+          <h3 data-i18n="home.read.t1">先减脂</h3>
+          <p data-i18n="home.read.d1">从减脂指南第 2 节开始：先算数，再改餐盘，最后加力量训练。前两周只改三件事就够了。</p>
+        </div>
+        <div class="readway" data-reveal data-delay="80">
+          <div class="readway__k" data-i18n="home.read.k2">如果你偏瘦、想变壮</div>
+          <h3 data-i18n="home.read.t2">先增肌</h3>
+          <p data-i18n="home.read.d2">直接看增肌指南的训练与吃。减脂那篇先收着——等你需要「干净期」的时候再回来。</p>
+        </div>
+        <div class="readway" data-reveal data-delay="160">
+          <div class="readway__k" data-i18n="home.read.k3">如果两头都想要</div>
+          <h3 data-i18n="home.read.t3">先后，再并行</h3>
+          <p data-i18n="home.read.d3">先花 8–12 周减脂，再开始小幅增重。新手在头一年确实可以「边减边增」，但别把它当默认策略。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <div class="wrap">
+      <div class="section-head" data-reveal>
+        <span class="eyebrow" data-i18n="home.faq.eyebrow">常见问题</span>
+        <h2 data-i18n="home.faq.h2">你大概想问的五个问题</h2>
+      </div>
+
+      <div class="accordion" data-reveal>
+        <div class="acc-item">
+          <button class="acc-trigger" type="button" aria-expanded="false">
+            <span data-i18n="home.faq.q1">一定要买蛋白粉吗？</span>
+            <span class="acc-icon" aria-hidden="true"></span>
+          </button>
+          <div class="acc-panel"><div>
+            <p data-i18n="home.faq.a1">不用。蛋白粉只是「方便的食物」，没有任何魔法。先看能不能靠鸡蛋、牛奶、鸡胸、豆腐、鱼虾、希腊酸奶吃到每天每公斤体重 1.6 克；吃不够、或实在没时间做饭，再用它补齐。</p>
+          </div></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-trigger" type="button" aria-expanded="false">
+            <span data-i18n="home.faq.q2">晚上吃碳水会更容易胖吗？</span>
+            <span class="acc-icon" aria-hidden="true"></span>
+          </button>
+          <div class="acc-panel"><div>
+            <p data-i18n="home.faq.a2">不会。决定体重的是全天的总热量和总蛋白质，不是某一顿饭的时间。同样的热量放在早上或晚上，对减重结果没有实质差别。真正要留意的是：晚上吃太多可能影响睡眠，而睡眠会反过来影响你的食欲和减脂效果。</p>
+          </div></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-trigger" type="button" aria-expanded="false">
+            <span data-i18n="home.faq.q3">可以只减肚子吗？</span>
+            <span class="acc-icon" aria-hidden="true"></span>
+          </button>
+          <div class="acc-panel"><div>
+            <p data-i18n="home.faq.a3">不能。脂肪是全身一起动员的，先减哪里由基因和激素决定，不受你练哪个部位影响。仰卧起坐能让腹肌变强，但不会优先烧掉腹部脂肪。想让肚子变小，唯一的路径是整体脂肪下降。</p>
+          </div></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-trigger" type="button" aria-expanded="false">
+            <span data-i18n="home.faq.q4">轻断食是不是更有效？</span>
+            <span class="acc-icon" aria-hidden="true"></span>
+          </button>
+          <div class="acc-panel"><div>
+            <p data-i18n="home.faq.a4">在总热量和蛋白质相同的前提下，研究反复显示：轻断食和常规三餐的减重效果接近。它的真正优势是「帮你少吃一顿」，劣势是容易在进食窗口里吃过头。如果你觉得这样更容易坚持，那就用它；如果让你暴食，就换掉。</p>
+          </div></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-trigger" type="button" aria-expanded="false">
+            <span data-i18n="home.faq.q5">减完停下来会反弹吗？</span>
+            <span class="acc-icon" aria-hidden="true"></span>
+          </button>
+          <div class="acc-panel"><div>
+            <p data-i18n="home.faq.a5">会——如果你一结束就回到原来的吃法。体重管理的本质，是把减脂期的做法「降级」成能长期过下去的做法：热量回到维持水平、蛋白质和力量训练保留下来。两篇文章的最后都写了「减完怎么办」。</p>
+          </div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 免责 -->
+  <section class="section section--tight">
+    <div class="wrap wrap--narrow">
+      <div class="callout callout--warn" data-reveal>
+        <div class="callout__label" data-i18n="common.notice">重要说明</div>
+        <p data-i18n="home.notice">
+          本站内容是一般性科普，不构成医疗建议，也不能替代医生、营养师或教练的个体化评估。
+          如果你正在孕期或哺乳期、有糖尿病/甲状腺/肾脏疾病、有进食障碍史，或正在服用影响体重与代谢的药物，请先咨询医生再调整饮食。
+        </p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="index.html" style="margin-bottom:12px">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span class="brand-name" data-i18n="brand.name">轻与壮</span>
+        </a>
+        <p style="font-size:13.5px;max-width:34ch" data-i18n="footer.tagline">一份不劝你自律、只告诉你下一步做什么的体重管理指南。</p>
+      </div>
+      <div>
+        <h4 data-i18n="footer.nav">目录</h4>
+        <a href="index.html" data-i18n="nav.home">首页</a>
+        <a href="fat-loss.html" data-i18n="nav.fat">减脂减重</a>
+        <a href="muscle-gain.html" data-i18n="nav.muscle">增肌增重</a>
+        <a href="#faq" data-i18n="footer.faq">常见问题</a>
+      </div>
+      <div>
+        <h4 data-i18n="footer.more">关于</h4>
+        <a href="fat-loss.html#refs" data-i18n="footer.refsFat">减脂篇参考文献</a>
+        <a href="muscle-gain.html#refs" data-i18n="footer.refsMuscle">增肌篇参考文献</a>
+        <a href="index.html#toolbox" data-i18n="footer.tools">工具</a>
+      </div>
+    </div>
+    <div class="footer-note">
+      <span class="disclaimer" data-i18n="footer.disclaimer">内容仅供科普参考，不构成医疗建议。所有数字都是群体研究中的平均值，个体差异很大——把它当作起点，用你自己的体重和围度数据去校准。</span>
+      <span data-i18n="footer.copy">© 2026 轻与壮 · 可自由分享</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/i18n/common.en.js"></script>
+<script src="assets/js/i18n/home.en.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

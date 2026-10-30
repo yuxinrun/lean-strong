@@ -1,0 +1,112 @@
+/* 首页英文文案 */
+Object.assign(window.I18N_EN, {
+
+  'meta.home.title': 'Lean & Strong · A practical, evidence-based guide to fat loss and muscle gain',
+  'meta.home.desc': 'Plain-language science for losing fat and building muscle: calorie deficits, protein, strength training, sleep and plateaus. With calculators, charts and printable checklists.',
+
+  /* Hero */
+  'home.hero.eyebrow': '2 long reads · Bilingual · No sign-up',
+  'home.hero.h1a': 'Hand your weight',
+  'home.hero.h1b': 'to a method, not willpower',
+  'home.hero.h1c': '.',
+  'home.hero.lead': 'This guide does one thing: it turns the two most confused topics in fitness — losing fat and building muscle — into steps you can start tomorrow morning. No folklore, no jargon wall, and every key claim traces back to a paper.',
+  'home.hero.cta1': 'Start with fat loss',
+  'home.hero.cta2': 'Start with muscle gain',
+  'home.hero.f1': 'Every claim is sourced',
+  'home.hero.f2': '2 calorie calculators',
+  'home.hero.f3': 'Bilingual · Light & dark',
+  'home.hero.f4': 'Completely free',
+
+  /* 两条路线 */
+  'home.paths.eyebrow': 'Two very different roads',
+  'home.paths.h2': 'Fat loss and muscle gain are near opposites',
+  'home.paths.p': 'One asks you to eat less, the other to eat more. One wants the scale to fall, the other wants it to creep up slowly. That is why they are two separate long reads — pick one, do not chase both.',
+
+  'home.fat.chip': 'Route 01 · Calorie deficit',
+  'home.fat.small': 'Fat loss',
+  'home.fat.title': 'Lose fat, not just weight',
+  'home.fat.desc': 'The goal is not a smaller number on the scale — it is less fat and the muscle you already have. From how to size a deficit and how to order takeout, to breaking a plateau and not regaining, in one pass.',
+  'home.fat.m1n': '0.5–1%',
+  'home.fat.m1l': 'Body weight lost per week',
+  'home.fat.m2n': '1.6–2.2 g',
+  'home.fat.m2l': 'Protein per kg of body weight',
+  'home.fat.m3n': '9 sections',
+  'home.fat.m3l': 'With a calculator and 4-week plan',
+  'home.fat.go': 'Read the fat-loss guide',
+
+  'home.muscle.chip': 'Route 02 · Progressive overload',
+  'home.muscle.small': 'Muscle gain',
+  'home.muscle.title': 'Gain muscle, not just weight',
+  'home.muscle.desc': 'Gaining weight is not the same as gaining muscle. When to add a plate, how much protein a day, how many sets per body part — the three detours beginners take most often, explained once properly.',
+  'home.muscle.m1n': '1–2 kg',
+  'home.muscle.m1l': 'Muscle a beginner can add in 3 months',
+  'home.muscle.m2n': '10–20 sets',
+  'home.muscle.m2l': 'Per muscle group, per week',
+  'home.muscle.m3n': '9 sections',
+  'home.muscle.m3l': 'With two training templates',
+  'home.muscle.go': 'Read the muscle-gain guide',
+
+  /* 五件事 */
+  'home.five.eyebrow': 'If you are short on time',
+  'home.five.h2': 'If you remember only five things',
+  'home.five.p': 'Five high-leverage moves pulled from both guides. They cost nothing and need no talent, yet they decide most of the outcome.',
+  'home.five.i1t': 'Pick one goal and hold it for 8 weeks',
+  'home.five.i1d': 'Fat loss and muscle gain need opposite eating conditions. Chase both at once and you usually finish neither. Which comes first depends on your current body fat and training age — both guides open with a way to decide.',
+  'home.five.i2t': 'Do the math once, then stop worrying about it',
+  'home.five.i2d': 'Calories and protein only need a rough estimate; a 10% error will not break any plan, but never estimating at all will. Run the calculator once and use that number as your anchor for a month.',
+  'home.five.i3t': 'Train with weights either way',
+  'home.five.i3d': 'In a deficit, lifting is the insurance policy that stops muscle from leaving with the fat. In a surplus, it is the only signal that actually makes muscle grow. Twice or three times a week, 40 minutes each, is already enough.',
+  'home.five.i4t': 'Sleep beats one extra hour of training',
+  'home.five.i4d': 'On the same restricted calories, people whose sleep is cut lose noticeably less fat and more muscle. Sleep is not a bonus you get to later; it directly rewrites the result of dieting.',
+  'home.five.i5t': 'Make the plan survive six months',
+  'home.five.i5d': 'The ordinary plan you can keep beats the perfect plan you cannot. Most "rebound" is not a broken metabolism — it is going back to the old way of eating. The finish line is not "done", it is a new default you can live on.',
+  'home.five.foot': 'The data and citations behind each line sit at the end of the matching article.',
+  'home.five.link': 'Jump to the tools',
+
+  /* 工具箱 */
+  'home.tools.eyebrow': 'Grab and go',
+  'home.tools.h2': 'Four tools you can use today',
+  'home.tools.p': 'No sign-up, no download. Open it, calculate, copy, tick.',
+  'home.tools.t1': 'Fat-loss calorie calculator',
+  'home.tools.d1': 'Enter height and weight to get maintenance calories, a daily target, protein grams and the rate of loss to expect.',
+  'home.tools.k1': 'About 1 minute',
+  'home.tools.t2': 'Muscle-gain surplus calculator',
+  'home.tools.d2': 'See how much to eat at a 5–15% surplus, so "bulking" does not become "gaining a belly".',
+  'home.tools.k2': 'About 1 minute',
+  'home.tools.t3': 'Two training templates',
+  'home.tools.d3': 'A 3-day full-body split and a 4-day upper/lower split, with sets, reps and rest. Copy them as-is.',
+  'home.tools.k3': 'Print-ready',
+  'home.tools.t4': '4-week starter checklist',
+  'home.tools.d4': 'Twelve concrete actions. Your ticks are saved in your own browser, so you can come back anytime.',
+  'home.tools.k4': 'Saves locally',
+
+  /* 读法 */
+  'home.read.eyebrow': 'How to read',
+  'home.read.h2': 'Pick the entrance that matches where you are',
+  'home.read.k1': 'If your body fat is high',
+  'home.read.t1': 'Start with fat loss',
+  'home.read.d1': 'Begin at section 2 of the fat-loss guide: do the math, change the plate, then add strength training. The first two weeks only need three changes.',
+  'home.read.k2': 'If you are lean and want size',
+  'home.read.t2': 'Start with muscle gain',
+  'home.read.d2': 'Go straight to training and eating in the muscle-gain guide. Park the fat-loss article until you need a "cutting" phase.',
+  'home.read.k3': 'If you want both',
+  'home.read.t3': 'One, then the other',
+  'home.read.d3': 'Spend 8–12 weeks leaning out first, then start a small surplus. Beginners really can do both in year one, but do not make it your default strategy.',
+
+  /* FAQ */
+  'home.faq.eyebrow': 'FAQ',
+  'home.faq.h2': 'The five questions you probably have',
+  'home.faq.q1': 'Do I need protein powder?',
+  'home.faq.a1': 'No. Protein powder is just convenient food with no magic in it. First see whether eggs, milk, chicken, tofu, fish and Greek yoghurt can get you to 1.6 g per kg of body weight. If you fall short, or genuinely have no time to cook, use powder to close the gap.',
+  'home.faq.q2': 'Does eating carbs at night make you fatter?',
+  'home.faq.a2': 'No. Body weight is decided by total daily calories and protein, not by the clock. The same calories eaten in the morning or at night make no meaningful difference to fat loss. What does matter: a heavy meal right before bed can hurt your sleep, and poor sleep changes appetite and results.',
+  'home.faq.q3': 'Can I lose belly fat specifically?',
+  'home.faq.a3': 'No. Fat is mobilised from the whole body, and where it leaves first is set by genetics and hormones, not by which muscle you train. Sit-ups strengthen your abs but will not preferentially burn belly fat. The only route to a smaller waist is a lower total body-fat level.',
+  'home.faq.q4': 'Is intermittent fasting more effective?',
+  'home.faq.a4': 'When total calories and protein are matched, studies repeatedly show intermittent fasting and normal meals produce similar weight loss. Its real advantage is that it removes a meal; its risk is overeating inside the eating window. If it makes the plan easier to keep, use it. If it makes you binge, drop it.',
+  'home.faq.q5': 'Will I regain the weight if I stop?',
+  'home.faq.a5': 'Yes — if stopping means going back to how you used to eat. Weight management is really about downgrading your dieting habits into habits you can keep for life: calories back to maintenance, protein and strength training kept. Both guides close with a "what happens after" section.',
+
+  /* 说明 */
+  'home.notice': 'This site is general education, not medical advice, and cannot replace an individual assessment by a doctor, dietitian or coach. If you are pregnant or breastfeeding, have diabetes, thyroid or kidney disease, a history of disordered eating, or take medication that affects weight and metabolism, talk to a clinician before changing your diet.'
+});

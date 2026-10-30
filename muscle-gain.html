@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title data-i18n="meta.muscle.title">增肌增重完全指南 · 轻与壮</title>
+<meta name="description" content="增肌需要什么条件？渐进超负荷、蛋白质、热量盈余怎么落地。含两套训练模板、盈余计算器、补剂真相与 12 周计划。" data-i18n-content="meta.muscle.desc" data-zh-content="增肌需要什么条件？渐进超负荷、蛋白质、热量盈余怎么落地。含两套训练模板、盈余计算器、补剂真相与 12 周计划。">
+<meta name="theme-color" content="#f7f3ea" media="(prefers-color-scheme: light)">
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem('ls-theme');
+      if (t !== 'light' && t !== 'dark') {
+        t = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+      document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+  })();
+</script>
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/pages.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%232b5c7e'/%3E%3Ccircle cx='16' cy='16' r='7' fill='none' stroke='%23f7f3ea' stroke-width='3'/%3E%3C/svg%3E">
+</head>
+<body data-page="muscle" class="theme-muscle">
+
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html" aria-label="轻与壮">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span class="brand-name" data-i18n="brand.name">轻与壮</span>
+      <span class="brand-sub" data-i18n="brand.sub">Lean &amp; Strong</span>
+    </a>
+    <nav class="nav" id="siteNav" aria-label="主导航">
+      <a href="index.html" data-i18n="nav.home">首页</a>
+      <a href="fat-loss.html" data-i18n="nav.fat">减脂减重</a>
+      <a href="muscle-gain.html" class="is-active" data-i18n="nav.muscle">增肌增重</a>
+    </nav>
+    <div class="header-actions">
+      <button class="seg" id="langToggle" type="button" data-i18n-aria="nav.langAria" data-zh-aria="切换语言" aria-label="切换语言">
+        <span data-lang-label="zh" class="is-on">中</span>
+        <span data-lang-label="en">EN</span>
+      </button>
+      <button class="icon-btn" id="themeToggle" type="button" aria-pressed="false" data-i18n-aria="nav.themeAria" data-zh-aria="切换深色模式" aria-label="切换深色模式">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="4.2"></circle>
+          <path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.2 5.2l1.4 1.4M17.4 17.4l1.4 1.4M18.8 5.2l-1.4 1.4M6.6 17.4l-1.4 1.4"></path>
+        </svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true">
+          <path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z"></path>
+        </svg>
+      </button>
+      <button class="icon-btn nav-toggle" id="navToggle" type="button" aria-expanded="false" data-i18n-aria="nav.menuAria" data-zh-aria="打开菜单" aria-label="打开菜单">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ==================== 文章头部 ==================== -->
+<header class="article-hero">
+  <div class="wrap">
+    <div class="article-hero__inner">
+      <span class="chip chip--muscle" data-i18n="muscle.chip">路线 02 · 增肌增重</span>
+      <h1 data-i18n="muscle.title">增重可以很快，增肌只能很慢</h1>
+      <p class="lead" data-i18n="muscle.lead">
+        增肌最反直觉的一点是：你越急着长，真正长出来的越是脂肪。
+        这篇把「肌肉为什么会长」「练多少才够」「吃多少才不白练」讲清楚，再给你一套 12 周能照着做的方案。
+      </p>
+
+      <div class="meta-bar">
+        <span class="i">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3.5 2"></path></svg>
+          <span data-i18n="muscle.meta.time">约 17 分钟读完</span>
+        </span>
+        <span class="dot"></span>
+        <span class="i"><span data-i18n="muscle.meta.sections">9 节 + 参考文献</span></span>
+        <span class="dot"></span>
+        <span class="i"><span data-i18n="muscle.meta.updated">更新于 2026 年 10 月</span></span>
+        <span class="dot"></span>
+        <span class="evidence" data-i18n="muscle.meta.evidence">依据：训练对照试验 + 元分析</span>
+      </div>
+
+      <div class="takeaways">
+        <div class="takeaways__head">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9 17.5 20 6.5"></path></svg>
+          <span data-i18n="muscle.takeaways.title">先看结论</span>
+        </div>
+        <ul>
+          <li><span class="n">01</span><span data-i18n="muscle.tk1">增肌需要三件事同时发生：渐进超负荷的力量训练、足够的蛋白质、轻微的热量盈余。少一件，进度就会打折。</span></li>
+          <li><span class="n">02</span><span data-i18n="muscle.tk2">新手前 12 周通常能增 1–2 公斤肌肉；训练两年后速率大约减半。这是生理速度，不是「练得不够狠」。</span></li>
+          <li><span class="n">03</span><span data-i18n="muscle.tk3">每个肌群每周 10–20 组，每组练到「还能再做 0–2 次」的程度，比任何花哨动作都有效。</span></li>
+          <li><span class="n">04</span><span data-i18n="muscle.tk4">盈余不用大：比维持热量高 5–10%（约多 200–300 千卡）就够。吃太多，多出来的几乎都进脂肪。</span></li>
+          <li><span class="n">05</span><span data-i18n="muscle.tk5">肌肉是在你不训练的时候长的。睡 7–9 小时、练后吃饱，进步的一半发生在这段时间。</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ==================== 正文 ==================== -->
+<div class="wrap">
+  <div class="article-layout">
+
+    <aside class="toc" aria-label="本页目录">
+      <div class="toc__title" data-i18n="common.toc">本页目录</div>
+      <ol>
+        <li><a href="#expect"><span class="num">01</span><span data-i18n="muscle.toc.1">现实预期：一年能长多少</span></a></li>
+        <li><a href="#how"><span class="num">02</span><span data-i18n="muscle.toc.2">肌肉是怎么长出来的</span></a></li>
+        <li><a href="#training"><span class="num">03</span><span data-i18n="muscle.toc.3">练：两套模板 + 加量规则</span></a></li>
+        <li><a href="#eat"><span class="num">04</span><span data-i18n="muscle.toc.4">吃：盈余与蛋白质</span></a></li>
+        <li><a href="#recovery"><span class="num">05</span><span data-i18n="muscle.toc.5">恢复：睡眠与频率</span></a></li>
+        <li><a href="#supplements"><span class="num">06</span><span data-i18n="muscle.toc.6">补剂：诚实清单</span></a></li>
+        <li><a href="#plan"><span class="num">07</span><span data-i18n="muscle.toc.7">12 周计划</span></a></li>
+        <li><a href="#myths"><span class="num">08</span><span data-i18n="muscle.toc.8">六个误区</span></a></li>
+        <li><a href="#refs"><span class="num">09</span><span data-i18n="muscle.toc.9">参考资料</span></a></li>
+      </ol>
+    </aside>
+
+    <article class="prose">
+
+      <!-- 01 -->
+      <section id="expect">
+        <h2><span class="h2num">01</span><span data-i18n="muscle.s1.h">现实预期：一年能长多少</span></h2>
+        <p class="section-lede" data-i18n="muscle.s1.lede">先把数字摆在桌面上。知道「正常速度」是多少，你就不会因为三个月没变成另一个人而放弃。</p>
+
+        <h3 data-i18n="muscle.s1.h3a">增重 ≠ 增肌</h3>
+        <p data-i18n="muscle.s1.p1">
+          如果你在三个月里重了 3 公斤，真实构成大概是：0.8 公斤肌肉、1 公斤水分与糖原、1.2 公斤脂肪。
+          这不是失败——增肌几乎不可能完全不增脂。问题只在于比例：<strong>盈余越大，脂肪的占比越高</strong>。
+        </p>
+
+        <h3 data-i18n="muscle.s1.h3b">自然训练的增肌速度（每月）</h3>
+        <p data-i18n="muscle.s1.p2">
+          在训练、吃、睡都到位的前提下，男性大致的肌肉增长速度如下；女性的速度大约是男性的一半，
+          上半身差异更明显。这些数字是经验模型，不是硬上限，但很接近大多数人的真实体验。
+        </p>
+
+        <figure class="figure chart" data-reveal>
+          <div class="figure__head">
+            <span class="figure__title" data-i18n="muscle.s1.fig.title">随着训练年限增长，增肌速度明显下降</span>
+            <span class="figure__note" data-i18n="muscle.s1.fig.note">男性，每月肌肉增量</span>
+          </div>
+          <div class="barchart" role="img" aria-label="柱状图：第一年每月约 1 公斤，第二年约 0.5 公斤，第三年约 0.25 公斤，第四年起约 0.1 公斤">
+            <div class="bar-col is-hot">
+              <div class="bar" style="--v:1"><span class="bar__value">1.0</span></div>
+              <div class="bar__label" data-i18n="muscle.s1.fig.b1">第 1 年</div>
+            </div>
+            <div class="bar-col is-hot">
+              <div class="bar" style="--v:0.5"><span class="bar__value">0.5</span></div>
+              <div class="bar__label" data-i18n="muscle.s1.fig.b2">第 2 年</div>
+            </div>
+            <div class="bar-col">
+              <div class="bar" style="--v:0.25"><span class="bar__value">0.25</span></div>
+              <div class="bar__label" data-i18n="muscle.s1.fig.b3">第 3 年</div>
+            </div>
+            <div class="bar-col">
+              <div class="bar" style="--v:0.12"><span class="bar__value">0.1</span></div>
+              <div class="bar__label" data-i18n="muscle.s1.fig.b4">第 4 年起</div>
+            </div>
+          </div>
+          <figcaption data-i18n="muscle.s1.fig.cap">
+            单位为公斤/月。新手期的「红利」只有一次——这也是为什么新手最该抓紧把训练和吃法学会。
+          </figcaption>
+        </figure>
+
+        <div class="callout callout--key">
+          <div class="callout__label" data-i18n="common.key">关键结论</div>
+          <p data-i18n="muscle.s1.key">
+            新手一年能长 5–10 公斤肌肉，是「一次性」的窗口。这个阶段哪怕方案不完美，只要重量在涨、蛋白够吃，
+            进步也会发生。别把新手期浪费在纠结动作细节上。
+          </p>
+        </div>
+
+        <h3 data-i18n="muscle.s1.h3c">什么时候不该直接增肌</h3>
+        <p data-i18n="muscle.s1.p3">
+          如果你体脂已经偏高（男性约 20% 以上、女性 30% 以上），先减脂更划算：
+          体脂高时，增肌的效率会被脂肪同步增长拖累，而且之后减脂要减更久。
+          训练不到一年的新手，通常可以在「轻微赤字」下同时增肌减脂——这叫新手红利，但它有期限。
+        </p>
+
+        <div class="callout callout--warn">
+          <div class="callout__label" data-i18n="common.warn">别做的事</div>
+          <p data-i18n="muscle.s1.warn">
+            「脏增重」——靠炸鸡、奶茶、蛋糕把热量堆上去。多出来的热量并不会因为来源是垃圾食品就更多长肌肉，
+            只会让脂肪长得更快、训练状态更差。盈余要小，食物质量要高。
+          </p>
+        </div>
+      </section>
+
+      <!-- 02 -->
+      <section id="how">
+        <h2><span class="h2num">02</span><span data-i18n="muscle.s2.h">肌肉是怎么长出来的</span></h2>
+        <p class="section-lede" data-i18n="muscle.s2.lede">理解这条链路，你就知道该在哪一环用力，以及为什么「只练不吃」和「只吃不练」都没用。</p>
+
+        <p data-i18n="muscle.s2.p1">
+          肌肉生长（肥大）不是「练的时候长」，而是训练之后身体的一次修复升级。整个过程大致是这样：
+        </p>
+
+        <ol class="steps">
+          <li>
+            <strong data-i18n="muscle.s2.st1t">训练给信号：机械张力为主</strong>
+            <p data-i18n="muscle.s2.st1d">当肌纤维在较大负荷下被拉紧、并且接近力竭时，身体会收到「现在的力量不够用」的信号。这是最重要的刺激，比「泵感」和「酸痛」都更关键。</p>
+          </li>
+          <li>
+            <strong data-i18n="muscle.s2.st2t">营养给原料：氨基酸 + 能量</strong>
+            <p data-i18n="muscle.s2.st2d">训练后 24–48 小时内，肌肉的蛋白质合成率会升高。这个过程需要氨基酸（来自蛋白质）和能量（来自食物）。原料不够，信号再强也修不起来。</p>
+          </li>
+          <li>
+            <strong data-i18n="muscle.s2.st3t">恢复给时间：睡眠是主战场</strong>
+            <p data-i18n="muscle.s2.st3d">合成主要发生在训练之后的休息期，尤其是深睡眠。连着几天睡 5 小时，训练效果会明显打折。</p>
+          </li>
+          <li>
+            <strong data-i18n="muscle.s2.st4t">下一次更难：渐进超负荷</strong>
+            <p data-i18n="muscle.s2.st4d">身体只会适应「超过上次」的刺激。如果半年都用同样的重量、同样的次数，肌肉没有理由继续长大。</p>
+          </li>
+        </ol>
+
+        <div class="callout callout--myth">
+          <div class="callout__label" data-i18n="common.myth">常见误解</div>
+          <p data-i18n="muscle.s2.myth">
+            「不练了肌肉会变成脂肪。」——不会。肌肉和脂肪是两种完全不同的组织，不能互相转换。
+            停练后肌肉会慢慢萎缩、脂肪可能增加，看起来像「变成了脂肪」，其实是两件独立发生的事。
+          </p>
+        </div>
+
+        <div class="callout callout--tip">
+          <div class="callout__label" data-i18n="common.tip">马上能做</div>
+          <p data-i18n="muscle.s2.tip">
+            从今天起记录两组数字：每个动作的<strong>重量和次数</strong>。
+            这是唯一能证明「渐进超负荷在发生」的证据。没有记录，你只能在半年后凭感觉猜。
+          </p>
+        </div>
+      </section>
+
+      <!-- 03 -->
+      <section id="training">
+        <h2><span class="h2num">03</span><span data-i18n="muscle.s3.h">练：两套模板 + 加量规则</span></h2>
+        <p class="section-lede" data-i18n="muscle.s3.lede">你不需要二十分钟的花式组合。把几个基本动作练重、练多、练够，就赢了大部分健身房里的随机努力。</p>
+
+        <h3 data-i18n="muscle.s3.h3a">先选动作：六个基本模式</h3>
+        <p data-i18n="muscle.s3.p1">
+          把训练想成「模式」而不是「动作」。同一个模式里，深蹲、腿举、保加利亚分腿蹲可以互换；
+          没必要非要排队等那个硬拉架。
+        </p>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th data-i18n="muscle.s3.pat.h1">动作模式</th>
+                <th data-i18n="muscle.s3.pat.h2">练到哪</th>
+                <th data-i18n="muscle.s3.pat.h3">可选的动作例子</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td data-i18n="muscle.s3.pat.r1c1">蹲（膝主导）</td><td data-i18n="muscle.s3.pat.r1c2">腿前侧、臀部</td><td data-i18n="muscle.s3.pat.r1c3">深蹲、腿举、分腿蹲</td></tr>
+              <tr><td data-i18n="muscle.s3.pat.r2c1">髂铰链（髂主导）</td><td data-i18n="muscle.s3.pat.r2c2">腿后侧、臀、下背</td><td data-i18n="muscle.s3.pat.r2c3">罗马尼亚硬拉、臀桥、骨盆前倾</td></tr>
+              <tr><td data-i18n="muscle.s3.pat.r3c1">水平推</td><td data-i18n="muscle.s3.pat.r3c2">胸、三头、前肩</td><td data-i18n="muscle.s3.pat.r3c3">卧推、俯卧撑、哑铃推</td></tr>
+              <tr><td data-i18n="muscle.s3.pat.r4c1">水平拉</td><td data-i18n="muscle.s3.pat.r4c2">背、二头、后肩</td><td data-i18n="muscle.s3.pat.r4c3">划船（坐姿/哑铃/反向飞鸟）</td></tr>
+              <tr><td data-i18n="muscle.s3.pat.r5c1">垂直推</td><td data-i18n="muscle.s3.pat.r5c2">肩、三头</td><td data-i18n="muscle.s3.pat.r5c3">站姿哑铃推、派克推、器械推</td></tr>
+              <tr><td data-i18n="muscle.s3.pat.r6c1">垂直拉</td><td data-i18n="muscle.s3.pat.r6c2">背、二头</td><td data-i18n="muscle.s3.pat.r6c3">引体向上、高位下拉、弹力带下拉</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 data-i18n="muscle.s3.h3b">练多少：容量与强度</h3>
+        <p data-i18n="muscle.s3.p2">
+          一项剂量-反应元分析发现：每周组数越多，肌肉增长越多，且呈现「逐渐加成」的关系<a href="#refs">[3]</a>。
+          但组数不能无限加——超过一定量后，恢复跟不上，反而倒退。对大多数人，每个肌群<strong>每周 10–20 组</strong>是甜蜜区。
+        </p>
+
+        <figure class="figure chart" data-reveal>
+          <div class="figure__head">
+            <span class="figure__title" data-i18n="muscle.s3.fig.title">每周组数与增肌效果（相对示意）</span>
+            <span class="figure__note" data-i18n="muscle.s3.fig.note">每个肌群 / 周</span>
+          </div>
+          <div class="hbars">
+            <div class="hbar-row">
+              <span class="hbar-row__label" data-i18n="muscle.s3.fig.l1">1–4 组</span>
+              <span class="hbar-track"><span class="hbar-fill" style="--v:45%"></span></span>
+              <span class="hbar-row__value" data-i18n="muscle.s3.fig.v1">少</span>
+            </div>
+            <div class="hbar-row">
+              <span class="hbar-row__label" data-i18n="muscle.s3.fig.l2">5–9 组</span>
+              <span class="hbar-track"><span class="hbar-fill" style="--v:72%"></span></span>
+              <span class="hbar-row__value" data-i18n="muscle.s3.fig.v2">中</span>
+            </div>
+            <div class="hbar-row">
+              <span class="hbar-row__label" data-i18n="muscle.s3.fig.l3">10–19 组</span>
+              <span class="hbar-track"><span class="hbar-fill" style="--v:100%"></span></span>
+              <span class="hbar-row__value" data-i18n="muscle.s3.fig.v3">多（推荐）</span>
+            </div>
+            <div class="hbar-row">
+              <span class="hbar-row__label" data-i18n="muscle.s3.fig.l4">20 组以上</span>
+              <span class="hbar-track"><span class="hbar-fill" style="--v:88%"></span></span>
+              <span class="hbar-row__value" data-i18n="muscle.s3.fig.v4">收益递减</span>
+            </div>
+          </div>
+          <figcaption data-i18n="muscle.s3.fig.cap">
+            相对值，不精确到百分比。20 组以上并非无效，而是需要更好的饮食与恢复才能消化；新手没必要从那里开始。
+          </figcaption>
+        </figure>
+
+        <p data-i18n="muscle.s3.p3">
+          比组数更容易被搞错的，是<strong>离力竭还有多远</strong>。每组都留 0–2 次的余力（RIR 0–2），
+          是目前证据最一致的做法：练得太轻没刺激，每组都硬推到力竭则会大幅拉高疲劳，影响下一次训练<a href="#refs">[9]</a>。
+        </p>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th data-i18n="muscle.s3.rir.h1">RIR（还能再做几次）</th>
+                <th data-i18n="muscle.s3.rir.h2">感觉</th>
+                <th data-i18n="muscle.s3.rir.h3">适合</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="num">0–1</td><td data-i18n="muscle.s3.rir.r1c2">最后一个已经很难保持动作标准</td><td data-i18n="muscle.s3.rir.r1c3">孤立动作（弯举、侧平举）</td></tr>
+              <tr><td class="num">2–3</td><td data-i18n="muscle.s3.rir.r2c2">明确知道自己还能再做两三次</td><td data-i18n="muscle.s3.rir.r2c3">复合动作主项（深蹲、卧推）</td></tr>
+              <tr><td class="num">4+</td><td data-i18n="muscle.s3.rir.r3c2">很轻松，像热身</td><td data-i18n="muscle.s3.rir.r3c3">仅限热身组或减量周</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 data-i18n="muscle.s3.h3c">加量规则：四种「更难」的方式</h3>
+        <p data-i18n="muscle.s3.p4">渐进超负荷不是一个抽象词，它只有四种落地方式。每次训练，至少做到其中一种：</p>
+        <ul>
+          <li data-i18n="muscle.s3.li1"><strong>加重量</strong>：同样次数下多 2.5–5 公斤。最直观，但不可能一直加。</li>
+          <li data-i18n="muscle.s3.li2"><strong>加次数</strong>：同样重量，从 8 次做到 10 次、再从 10 次做到 12 次。</li>
+          <li data-i18n="muscle.s3.li3"><strong>加组数</strong>：每肌群每周多加 1–2 组，直到接近 20 组上限。</li>
+          <li data-i18n="muscle.s3.li4"><strong>加控制</strong>：放慢下放速度（2–3 秒）、加大动作幅度。适合器械有限的时候。</li>
+        </ul>
+
+        <h3 data-i18n="muscle.s3.h3d">模板 A：一周三天全身（新手首选）</h3>
+        <p data-i18n="muscle.s3.p5">隔天练一次（如周一/三/五），每次 45–60 分钟。每个动作 3 组，组间休息 2 分钟（孤立动作 60–90 秒）。</p>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th data-i18n="muscle.s3.tplA.h1">顺序</th>
+                <th data-i18n="muscle.s3.tplA.h2">动作</th>
+                <th data-i18n="muscle.s3.tplA.h3">组 × 次</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="num">1</td><td data-i18n="muscle.s3.tplA.r1">深蹲 / 腿举</td><td class="num">3 × 6–10</td></tr>
+              <tr><td class="num">2</td><td data-i18n="muscle.s3.tplA.r2">卧推 / 上斜哑铃推</td><td class="num">3 × 6–10</td></tr>
+              <tr><td class="num">3</td><td data-i18n="muscle.s3.tplA.r3">杠铃 / 哑铃划船</td><td class="num">3 × 8–12</td></tr>
+              <tr><td class="num">4</td><td data-i18n="muscle.s3.tplA.r4">罗马尼亚硬拉</td><td class="num">3 × 8–10</td></tr>
+              <tr><td class="num">5</td><td data-i18n="muscle.s3.tplA.r5">侧平举 + 二头弯举（超级组）</td><td class="num">2–3 × 12–15</td></tr>
+              <tr><td class="num">6</td><td data-i18n="muscle.s3.tplA.r6">平板支撑 / 卷腹</td><td class="num">2–3 × 30–45 秒</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 data-i18n="muscle.s3.h3e">模板 B：一周四天上下肢（练过半年以上）</h3>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th data-i18n="muscle.s3.tplB.h1">训练日</th>
+                <th data-i18n="muscle.s3.tplB.h2">内容</th>
+                <th data-i18n="muscle.s3.tplB.h3">重点</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td data-i18n="muscle.s3.tplB.r1c1">周一 · 上肢</td><td data-i18n="muscle.s3.tplB.r1c2">卧推 4×5–8 / 划船 4×6–10 / 肩推 3×8–12 / 下拉 3×8–12 / 臂部 2×12</td><td data-i18n="muscle.s3.tplB.r1c3">主项重，辅助中等</td></tr>
+              <tr><td data-i18n="muscle.s3.tplB.r2c1">周二 · 下肢</td><td data-i18n="muscle.s3.tplB.r2c2">深蹲 4×5–8 / 罗马尼亚硬拉 3×8–10 / 箭步蹲 3×10–12 / 小腿 3×12–15</td><td data-i18n="muscle.s3.tplB.r2c3">蹲 + 髂铰链都要有</td></tr>
+              <tr><td data-i18n="muscle.s3.tplB.r3c1">周四 · 上肢</td><td data-i18n="muscle.s3.tplB.r3c2">上斜推 3×8–10 / 垂直拉 4×6–10 / 侧平举 3×12–15 / 臂部 3×10–12</td><td data-i18n="muscle.s3.tplB.r3c3">换角度刺激同一肌群</td></tr>
+              <tr><td data-i18n="muscle.s3.tplB.r4c1">周五 · 下肢</td><td data-i18n="muscle.s3.tplB.r4c2">腿举 4×10–12 / 臀桥 3×8–12 / 单腿动作 3×10 / 核心</td><td data-i18n="muscle.s3.tplB.r4c3">量大但不一定重</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="callout callout--tip">
+          <div class="callout__label" data-i18n="common.tip">在家练也能进步</div>
+          <p data-i18n="muscle.s3.tip">
+            没有器械不等于没有强度。自重动作的进阶路径：俯卧撑 → 下斜俯卧撑 → 单臂辅助 → 负重背心；
+            深蹲 → 保加利亚分腿蹲 → 单腿深蹲；加一根弹力带就能做划船和下拉。
+            关键是<strong>把「还能再做几次」控制在 2 次以内</strong>，而不是做多少个。
+          </p>
+        </div>
+      </section>
+
+      <!-- 04 -->
+      <section id="eat">
+        <h2><span class="h2num">04</span><span data-i18n="muscle.s4.h">吃：盈余与蛋白质</span></h2>
+        <p class="section-lede" data-i18n="muscle.s4.lede">增肌期唯一需要「多吃」的时候。但多吃的量，比你想象的小得多。</p>
+
+        <p data-i18n="muscle.s4.p1">
+          一个常被误用的经验是「想变壮就吃到吐」。但对照试验显示：把盈余从 5% 加到 15%，
+          力量与肌肉增长并没有明显差异，<strong>多出来的热量几乎都变成了脂肪</strong><a href="#refs">[4][5]</a>。
+          所以推荐的区间是维持热量 + 5%–10%，也就是每天多 200–300 千卡。
+        </p>
+
+        <div class="calc" id="calcMuscle">
+          <div class="calc__head">
+            <h3 data-i18n="muscle.calc.title">增肌热量与蛋白质计算器</h3>
+            <p data-i18n="muscle.calc.sub">输入基础数据，得到维持热量、盈余目标与三大营养素</p>
+          </div>
+          <div class="calc__body">
+            <div class="field field--full">
+              <label data-i18n="muscle.calc.sex">性别</label>
+              <div class="seg-ctl">
+                <label><input type="radio" name="muscleSex" value="m" checked><span data-i18n="muscle.calc.male">男性</span></label>
+                <label><input type="radio" name="muscleSex" value="f"><span data-i18n="muscle.calc.female">女性</span></label>
+              </div>
+            </div>
+            <div class="field">
+              <label for="muscleAge" data-i18n="muscle.calc.age">年龄</label>
+              <input id="muscleAge" type="number" inputmode="numeric" min="14" max="90" step="1" value="25">
+            </div>
+            <div class="field">
+              <label for="muscleHeight" data-i18n="muscle.calc.height">身高（厘米）</label>
+              <input id="muscleHeight" type="number" inputmode="numeric" min="130" max="220" step="1" value="175">
+            </div>
+            <div class="field">
+              <label for="muscleWeight" data-i18n="muscle.calc.weight">体重（公斤）</label>
+              <input id="muscleWeight" type="number" inputmode="decimal" min="35" max="250" step="0.1" value="65">
+            </div>
+            <div class="field">
+              <label for="muscleActivity" data-i18n="muscle.calc.activity">日常活动量</label>
+              <select id="muscleActivity">
+                <option value="1.2" data-i18n="muscle.calc.act1">久坐，不训练</option>
+                <option value="1.375" selected data-i18n="muscle.calc.act2">每周训练 2–3 次</option>
+                <option value="1.55" data-i18n="muscle.calc.act3">每周训练 4–5 次</option>
+                <option value="1.725" data-i18n="muscle.calc.act4">每周训练 6 次以上 / 体力工作</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="muscleSurplus" data-i18n="muscle.calc.surplus">盈余幅度</label>
+              <select id="muscleSurplus">
+                <option value="0.05" data-i18n="muscle.calc.surplus1">保守 +5%（新手 / 容易增脂）</option>
+                <option value="0.08" selected data-i18n="muscle.calc.surplus2">标准 +8%（推荐）</option>
+                <option value="0.12" data-i18n="muscle.calc.surplus3">激进 +12%（偏瘦、训练年限长）</option>
+              </select>
+            </div>
+            <div class="field field--full">
+              <label for="muscleProtein" data-i18n="muscle.calc.proteinSel">蛋白质目标</label>
+              <select id="muscleProtein">
+                <option value="1.6" data-i18n="muscle.calc.p1">1.6 克/公斤（最低有效）</option>
+                <option value="1.8" selected data-i18n="muscle.calc.p2">1.8 克/公斤（推荐）</option>
+                <option value="2.2" data-i18n="muscle.calc.p3">2.2 克/公斤（高龄 / 减脂期）</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="calc__out" aria-live="polite">
+            <div class="calc__out-row">
+              <span class="k" data-i18n="muscle.calc.tdee">每日维持热量</span>
+              <span class="v"><span data-out="muscleTdee">—</span> <span data-i18n="unit.kcal">千卡</span></span>
+            </div>
+            <div class="calc__out-row">
+              <span class="k" data-i18n="muscle.calc.target">每日目标摄入</span>
+              <span class="v big"><span data-out="muscleTarget">—</span> <span data-i18n="unit.kcal">千卡</span></span>
+            </div>
+            <div class="calc__out-row">
+              <span class="k" data-i18n="muscle.calc.surplusOut">每日盈余</span>
+              <span class="v">+<span data-out="muscleSurplus">—</span> <span data-i18n="unit.kcal">千卡</span></span>
+            </div>
+            <div class="calc__out-row">
+              <span class="k" data-i18n="muscle.calc.weekly">预期每周增重</span>
+              <span class="v"><span data-out="muscleWeekly">—</span> <span data-i18n="unit.kg">公斤</span></span>
+            </div>
+
+            <div class="macros">
+              <div class="macro">
+                <div class="macro__num" data-out="muscleProtein">—</div>
+                <div class="macro__label" data-i18n="muscle.calc.protein">蛋白质（克）</div>
+              </div>
+              <div class="macro">
+                <div class="macro__num" data-out="muscleFat">—</div>
+                <div class="macro__label" data-i18n="muscle.calc.fat">脂肪（克）</div>
+              </div>
+              <div class="macro">
+                <div class="macro__num" data-out="muscleCarbs">—</div>
+                <div class="macro__label" data-i18n="muscle.calc.carbs">碳水（克）</div>
+              </div>
+            </div>
+
+            <p class="calc__hint" data-i18n="muscle.calc.hint">
+              每周增重在体重的 0.25%–0.5% 之间比较合适（新手可以靠近上限）。连续两三周超过这个速度，先把盈余降一档。
+            </p>
+          </div>
+        </div>
+
+        <h3 data-i18n="muscle.s4.h3a">蛋白质：总量比时机重要</h3>
+        <p data-i18n="muscle.s4.p2">
+          元回归显示，配合力量训练时，蛋白质摄入到<strong>每公斤体重约 1.6 克</strong>后，增长收益趋于平缓；
+          上限附近通常是 2.2 克<a href="#refs">[2]</a>。比「练完 30 分钟内必须喝蛋白粉」重要得多的，是全天的总量。
+        </p>
+        <ul>
+          <li data-i18n="muscle.s4.li1"><strong>分 3–5 餐</strong>，每餐 0.4 克/公斤左右（70 公斤约 28 克）。</li>
+          <li data-i18n="muscle.s4.li2"><strong>早餐就要有蛋白</strong>，否则很难在一天内凑够总量。</li>
+          <li data-i18n="muscle.s4.li3"><strong>植物蛋白也能用</strong>，但需要量更多、且注意搭配（豆类 + 谷物互补）。</li>
+        </ul>
+
+        <h3 data-i18n="muscle.s4.h3b">碳水和脂肪：别怕碳水</h3>
+        <p data-i18n="muscle.s4.p3">
+          碳水不是增肌的敌人，它是训练日的燃料。碳水吃得太少，训练重量和组数会直接下降，
+          而「能多练两组」对增肌的价值远大于「少吃一碗饭」带来的那点热量差。
+          脂肪建议占热量的 20%–30%，不要低于每公斤 0.6 克——它对激素和吸收都有作用。
+        </p>
+
+        <h3 data-i18n="muscle.s4.h3c">一天长什么样（约 70 公斤 / 2800 千卡 / 130 克蛋白质）</h3>
+        <div class="meal-grid">
+          <div class="meal">
+            <div class="meal__k" data-i18n="muscle.s4.m1k">早餐<span>7:30</span></div>
+            <div>
+              <p data-i18n="muscle.s4.m1d">燕麦 60 克 + 牛奶 300 ml + 两个鸡蛋 + 一根香蕉。</p>
+              <p class="meal__macros" data-i18n="muscle.s4.m1m">约 700 千卡 · 蛋白质 35 克</p>
+            </div>
+          </div>
+          <div class="meal">
+            <div class="meal__k" data-i18n="muscle.s4.m2k">午餐<span>12:30</span></div>
+            <div>
+              <p data-i18n="muscle.s4.m2d">一大碗米饭 + 鸡腿或牛肉 150 克 + 蔬菜 + 一勺油。</p>
+              <p class="meal__macros" data-i18n="muscle.s4.m2m">约 850 千卡 · 蛋白质 45 克</p>
+            </div>
+          </div>
+          <div class="meal">
+            <div class="meal__k" data-i18n="muscle.s4.m3k">练后 / 加餐<span>16:30</span></div>
+            <div>
+              <p data-i18n="muscle.s4.m3d">乳清蛋白 1 勺 + 一根香蕉，或酸奶 + 坚果 + 面包。</p>
+              <p class="meal__macros" data-i18n="muscle.s4.m3m">约 400 千卡 · 蛋白质 30 克</p>
+            </div>
+          </div>
+          <div class="meal">
+            <div class="meal__k" data-i18n="muscle.s4.m4k">晚餐<span>19:30</span></div>
+            <div>
+              <p data-i18n="muscle.s4.m4d">杂粮饭 + 鱼 / 虾 / 豆腐 200 克 + 大量蔬菜。</p>
+              <p class="meal__macros" data-i18n="muscle.s4.m4m">约 850 千卡 · 蛋白质 40 克</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="callout callout--tip">
+          <div class="callout__label" data-i18n="common.tip">实在吃不下怎么办</div>
+          <p data-i18n="muscle.s4.tip">
+            增肌期最常见的障碍不是「吃垃圾食品」，而是「吃不下」。三个不胀肚的办法：
+            用液体热量（牛奶、酸奶、自打奶昔）、把坚果和橄榄油加进主食、把三餐改成四到五顿小份。
+            不要用油炸和奶茶凑热量——它们只帮你增脂。
+          </p>
+        </div>
+      </section>
+
+      <!-- 05 -->
+      <section id="recovery">
+        <h2><span class="h2num">05</span><span data-i18n="muscle.s5.h">恢复：睡眠与频率</span></h2>
+        <p class="section-lede" data-i18n="muscle.s5.lede">训练只是下单，恢复才是发货。而恢复里最被低估的一件事，是关灯。</p>
+
+        <p data-i18n="muscle.s5.p1">
+          睡眠不足会同时拉低三件事：训练表现、肌肉蛋白质合成、以及你的饮食自控力。
+          对增肌来说，它的重要性跟「今天吃够蛋白了吗」同级。目标是每晚 7–9 小时，
+          并且尽量固定作息——身体对「规律」的评价，比对「周末补觉」高得多。
+        </p>
+
+        <ul>
+          <li data-i18n="muscle.s5.li1"><strong>频率比「练到死」重要。</strong>同一个肌群每周练 2 次，通常优于每周 1 次把容量一次性肝完——后者后半程的质量会明显下降。</li>
+          <li data-i18n="muscle.s5.li2"><strong>酸痛不是指标。</strong>延迟性酸痛（DOMS）与肌肉增长的相关性很弱。不酸不代表白练，酸得下不了楼也不代表练得好。</li>
+          <li data-i18n="muscle.s5.li3"><strong>每 6–8 周安排一个减量周。</strong>组数减半、重量降 10%，让肌腱和神经系统追上肌肉。很多人卡住不是因为练得少，而是因为从没减过量。</li>
+          <li data-i18n="muscle.s5.li4"><strong>有氧不用停。</strong>每周 2 次、每次 20–30 分钟低强度有氧，不会妨碍增肌，还能改善恢复和心肺。把它放在力量训练之后或另一天。</li>
+          <li data-i18n="muscle.s5.li5"><strong>酒精是会扣分的。</strong>它抑制肌肉蛋白质合成、破坏深睡眠，还会让你第二天训练发虚。不是不能喝，但别在训练日和关键睡眠前喝。</li>
+        </ul>
+
+        <div class="callout callout--key">
+          <div class="callout__label" data-i18n="common.key">关键结论</div>
+          <p data-i18n="muscle.s5.key">
+            如果你只能在「多练一天」和「多睡一小时」之间选，选睡觉。
+            增肌的瓶颈几乎从不是训练量不够，而是恢复不够、吃得不够。
+          </p>
+        </div>
+      </section>
+
+      <!-- 06 -->
+      <section id="supplements">
+        <h2><span class="h2num">06</span><span data-i18n="muscle.s6.h">补剂：诚实清单</span></h2>
+        <p class="section-lede" data-i18n="muscle.s6.lede">绝大多数补剂的效果远小于包装上的承诺。真正值得花钱的，只有三个（其中两个其实算食物）。</p>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th data-i18n="muscle.s6.h1">补剂</th>
+                <th data-i18n="muscle.s6.h2">证据强度</th>
+                <th data-i18n="muscle.s6.h3">建议</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-i18n="muscle.s6.r1c1">肌酸一水合物</td>
+                <td><span class="pill pill--yes" data-i18n="muscle.s6.strong">强</span></td>
+                <td data-i18n="muscle.s6.r1c3">每天 3–5 克，什么时候吃都行，不需要「加载期」，也不需要循环停用。对力量和肌肉增长的帮助是补剂里最确定的。</td>
+              </tr>
+              <tr>
+                <td data-i18n="muscle.s6.r2c1">乳清蛋白粉</td>
+                <td><span class="pill pill--yes" data-i18n="muscle.s6.strong">强</span></td>
+                <td data-i18n="muscle.s6.r2c3">它不是补剂，是「方便的食物」。先把三餐的蛋白吃够，吃不够再用一勺补齐。</td>
+              </tr>
+              <tr>
+                <td data-i18n="muscle.s6.r3c1">咖啡因</td>
+                <td><span class="pill pill--yes" data-i18n="muscle.s6.strong">强</span></td>
+                <td data-i18n="muscle.s6.r3c3">训练前 3–6 毫克/公斤（70 公斤约 200–400 毫克）能提升耐力与专注。下午之后不要用，会伤睡眠。</td>
+              </tr>
+              <tr>
+                <td data-i18n="muscle.s6.r4c1">维生素 D</td>
+                <td><span class="pill" data-i18n="muscle.s6.mid">中（仅限缺乏者）</span></td>
+                <td data-i18n="muscle.s6.r4c3">不缺就不用补。长期室内工作、很少晒太阳的人可以查一次血清水平再决定。</td>
+              </tr>
+              <tr>
+                <td data-i18n="muscle.s6.r5c1">BCAA / 支链氨基酸</td>
+                <td><span class="pill" data-i18n="muscle.s6.weak">弱</span></td>
+                <td data-i18n="muscle.s6.r5c3">只要全天蛋白吃够 1.6 克/公斤，额外补 BCAA 几乎没有额外收益。钱可以省下来买鸡蛋。</td>
+              </tr>
+              <tr>
+                <td data-i18n="muscle.s6.r6c1">「睾酮助推剂」/ ZMA</td>
+                <td><span class="pill" data-i18n="muscle.s6.none1">无</span></td>
+                <td data-i18n="muscle.s6.r6c3">健康人的睾酮水平不会被这些产品有意义地抬高。训练和睡眠的影响远大于它们。</td>
+              </tr>
+              <tr>
+                <td data-i18n="muscle.s6.r7c1">氮泵 / 增肌丸</td>
+                <td><span class="pill" data-i18n="muscle.s6.none2">无（除咖啡因）</span></td>
+                <td data-i18n="muscle.s6.r7c3">让你「有感觉」的通常是咖啡因和辣味刺激剂。效果与一杯咖啡无实质区别，价格却是它的几十倍。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="pill-row">
+          <span class="pill pill--yes" data-i18n="muscle.s6.p1">值得买：肌酸</span>
+          <span class="pill pill--yes" data-i18n="muscle.s6.p2">按需：蛋白粉</span>
+          <span class="pill pill--yes" data-i18n="muscle.s6.p3">按需：咖啡因</span>
+          <span class="pill pill--no" data-i18n="muscle.s6.p4">BCAA</span>
+          <span class="pill pill--no" data-i18n="muscle.s6.p5">睾酮助推剂</span>
+          <span class="pill pill--no" data-i18n="muscle.s6.p6">酵素 / 排毒</span>
+        </div>
+
+        <div class="callout callout--warn">
+          <div class="callout__label" data-i18n="common.warn">提醒</div>
+          <p data-i18n="muscle.s6.warn">
+            不要自行使用合成代谢类药物（类固醇等）。它们有真实的健康风险，包括肝损伤、血脂异常、
+            内分泌紊乱和心血管事件，而且一旦开始就很难安全地停。这一页不提供任何相关建议。
+          </p>
+        </div>
+      </section>
+
+      <!-- 07 -->
+      <section id="plan">
+        <h2><span class="h2num">07</span><span data-i18n="muscle.s7.h">12 周计划</span></h2>
+        <p class="section-lede" data-i18n="muscle.s7.lede">把「想练壮」拆成十二件可以勾掉的事。勾选状态只保存在你自己的浏览器里。</p>
+
+        <div class="checklist" data-checklist="muscle12w">
+          <label class="check"><input type="checkbox" value="m1"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"></path></svg></span><span class="check__text" data-i18n="muscle.s7.i1"><strong>第 1 周</strong>：把三个训练日写进日历（如周一/三/五），而不是「有空就去」</span></label>
+          <label class="check"><input type="checkbox" value="m2"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"></path></svg></span><span class="check__text" data-i18n="muscle.s7.i2">选定模板 A 或 B，把六个动作写进手机的备忘录或笔记</span></label>
+          <label class="check"><input type="checkbox" value="m3"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"></path></svg></span><span class="check__text" data-i18n="muscle.s7.i3">每次训练只记一件事：重量 × 次数</span></label>
+          <label class="check"><input type="checkbox" value="m4"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"></path></svg></span><span class="check__text" data-i18n="muscle.s7.i4"><strong>第 2 周</strong>：用计算器定下每日热量与蛋白质，写在看得见的地方</span></label>
+          <label class="check"><input type="checkbox" value="m5"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"></path></svg></span><span class="check__text" data-i18n="muscle.s7.i5">三餐各含一份蛋白质（鸡蛋/肉/鱼/豆腐/奶）</span></label>
+          <label class="check"><input type="checkbox" value="m6"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"></path></svg></span><span class="check__text" data-i18n="muscle.s7.i6">每天多吃 200–300 千卡（一杯牛奶 + 一根香蕉就够了）</span></label>
+          <label class="check"><input type="checkbox" value="m7"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"></path></svg></span><span class="check__text" data-i18n="muscle.s7.i7"><strong>第 3 周</strong>：每个肌群每周 10 组以上，每组留 0–2 次余力</span></label>
+          <label class="check"><input type="checkbox" value="m8"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"></path></svg></span><span class="check__text" data-i18n="muscle.s7.i8">开始记录睡眠，目标每周至少 5 天睡够 7 小时</span></label>
+          <label class="check"><input type="checkbox" value="m9"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"></path></svg></span><span class="check__text" data-i18n="muscle.s7.i9"><strong>第 4–8 周</strong>：每周至少一个动作比上周多做了 1 次或多加 2.5 公斤</span></label>
+          <label class="check"><input type="checkbox" value="m10"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"></path></svg></span><span class="check__text" data-i18n="muscle.s7.i10">每周固定时间称重 3 次取平均，超过每周 0.5% 就减一点盈余</span></label>
+          <label class="check"><input type="checkbox" value="m11"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"></path></svg></span><span class="check__text" data-i18n="muscle.s7.i11"><strong>第 6 周</strong>：安排一个减量周（组数减半），拍一张同角度的照片存档</span></label>
+          <label class="check"><input type="checkbox" value="m12"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"></path></svg></span><span class="check__text" data-i18n="muscle.s7.i12"><strong>第 12 周</strong>：回顾三个指标：主项重量、围度、体重。力量没涨就是方案要改，而不是你不适合</span></label>
+        </div>
+        <p class="checklist__count"><span data-check-count="muscle12w">0 / 12</span> <span data-i18n="muscle.s7.done">已完成</span></p>
+
+        <div class="callout callout--tip">
+          <div class="callout__label" data-i18n="muscle.s7.tipLabel">怎么判断「有没有进步」</div>
+          <p data-i18n="muscle.s7.tip">
+            把三个信号当成绩单：① 主要动作的重量或次数在四周内有提高；② 肩、胸、腿围度在 8–12 周内有变化；
+            ③ 腰围没有涨得比胸围快。三者有两条在改善，就是走在正确的路上。
+            镜子容易骗人，数据比较诚实。
+          </p>
+        </div>
+      </section>
+
+      <!-- 08 -->
+      <section id="myths">
+        <h2><span class="h2num">08</span><span data-i18n="muscle.s8.h">六个误区</span></h2>
+        <p class="section-lede" data-i18n="muscle.s8.lede">这几条几乎每个刚进健身房的人都听过。提前知道，能省下好几年。</p>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th data-i18n="muscle.s8.h1">你听过的说法</th>
+                <th data-i18n="muscle.s8.h2">实际是怎么回事</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td data-i18n="muscle.s8.r1c1">练得越多、越久，肌肉长得越多</td><td data-i18n="muscle.s8.r1c2">肌肉长的前提是「刺激 + 恢复」。每天两小时、同一个部位连续练，往往只带来疲劳累积。每次 45–60 分钟、每周 3–4 次已经能跑很久。</td></tr>
+              <tr><td data-i18n="muscle.s8.r2c1">只有大重量才能长肌肉</td><td data-i18n="muscle.s8.r2c2">只要接近力竭，中等重量（8–15 次）与大量重量（3–6 次）的增肌效果接近。重量的价值在于「便于量化进步」，不是唯一路径。</td></tr>
+              <tr><td data-i18n="muscle.s8.r3c1">女生一练就会变成金刚芭比</td><td data-i18n="muscle.s8.r3c2">不会有。女性的睾酮水平远低于男性，自然训练下的增肌速度约为男性一半。练力量会让线条更紧、体态更好，而不是变壮。</td></tr>
+              <tr><td data-i18n="muscle.s8.r4c1">不酸痛就没练到</td><td data-i18n="muscle.s8.r4c2">酸痛（DOMS）来自不习惯的刺激，与增长的相关性很弱。总酸痛的人往往恢复不足，反而进步慢。看重量有没有涨，别看得多酸。</td></tr>
+              <tr><td data-i18n="muscle.s8.r5c1">只练胸和手臂就够了</td><td data-i18n="muscle.s8.r5c2">选样性训练会造成体态和力量失衡（圆肩、下背痛）。背、腿、臀的肌群更大，对代谢和体态的影响也更大。先练全身，再练偏好。</td></tr>
+              <tr><td data-i18n="muscle.s8.r6c1">蛋白粉不喝就练不出来</td><td data-i18n="muscle.s8.r6c2">总量达标就行。鸡蛋、牛奶、鸡肉、鱼、豆腐都能凑到 1.6 克/公斤。蛋白粉只是省钱、省时间的一种方式，不是必需品。</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- 09 -->
+      <section id="refs">
+        <h2><span class="h2num">09</span><span data-i18n="muscle.s9.h">参考资料</span></h2>
+        <p class="section-lede" data-i18n="muscle.s9.lede">训练科学里很多结论仍在演化。下面这些是当前证据较一致的部分；遇到相互矛盾的新研究，以更新的系统综述为准。</p>
+
+        <ol class="refs">
+          <li>Schoenfeld BJ, Grgic J, Ogborn D, Krieger JW. Strength and hypertrophy adaptations between low- vs. high-load resistance training: a systematic review and meta-analysis. <em>J Strength Cond Res.</em> 2017;31(12):3508–3523.</li>
+          <li>Morton RW, Murphy KT, McKellar SR, et al. A systematic review, meta-analysis and meta-regression of the effect of protein supplementation on resistance training-induced gains in muscle mass and strength. <em>Br J Sports Med.</em> 2018;52(6):376–384.</li>
+          <li>Schoenfeld BJ, Ogborn D, Krieger JW. Dose-response relationship between weekly resistance training volume and increases in muscle mass. <em>J Sports Sci.</em> 2017;35(11):1073–1082.</li>
+          <li>Helms ER, Pruett MCL, Aragon AA, et al. Effect of small and large energy surpluses on strength, muscle, and other morphological adaptations in resistance-trained individuals. <em>Sports Med Open.</em> 2023;9:86.</li>
+          <li>Slater GJ, Dieter BP, Marsh DJ, et al. Is an energy surplus required to maximize skeletal muscle hypertrophy associated with resistance training? <em>Front Nutr.</em> 2019;6:131.</li>
+          <li>Aragon AA, Schoenfeld BJ. Magnitude and composition of the energy surplus for maximizing muscle hypertrophy. <em>Strength Cond J.</em> 2020;42(4):1–8.</li>
+          <li>Kreider RB, Kalman DS, Antonio J, et al. International Society of Sports Nutrition position stand: safety and efficacy of creatine monohydrate. <em>J Int Soc Sports Nutr.</em> 2017;14:18.</li>
+          <li>Nunes EA, Colenso-Semple L, McKellar SR, et al. Systematic review and meta-analysis of protein intake to support muscle mass and function in health and disease. <em>J Cachexia Sarcopenia Muscle.</em> 2022;13(2):795–810.</li>
+          <li>Refalo MC, Helms ER, Trexler ET, et al. Influence of resistance training proximity-to-failure on skeletal muscle hypertrophy: a systematic review with meta-analysis. <em>Sports Med.</em> 2023;53(3):649–665.</li>
+          <li>Pelland JC, Robinson ZP, Remmert JF, et al. The resistance training dose response: meta-regressions exploring the effects of weekly volume and frequency on muscle hypertrophy. <em>Sports Med.</em> 2025.</li>
+          <li>Damas F, Phillips SM, Libardi CA, et al. Resistance training-induced changes in integrated myofibrillar protein synthesis are related to hypertrophy only after attenuation of muscle damage. <em>J Physiol.</em> 2016;594(18):5209–5222.</li>
+          <li>Thomas DT, Erdman KA, Burke LM. Nutrition and athletic performance: position of the Academy of Nutrition and Dietetics, Dietitians of Canada, and the American College of Sports Medicine. <em>J Acad Nutr Diet.</em> 2016;116(3):501–528.</li>
+        </ol>
+      </section>
+
+      <div class="pager">
+        <a href="fat-loss.html">
+          <span class="pager__k" data-i18n="common.prev">上一篇</span>
+          <span class="pager__t" data-i18n="muscle.pager.prev">减脂减重：先把热量与餐盘搞对</span>
+        </a>
+        <a href="index.html" style="text-align:right">
+          <span class="pager__k" data-i18n="common.next">下一篇</span>
+          <span class="pager__t" data-i18n="nav.home">首页</span>
+        </a>
+      </div>
+
+    </article>
+  </div>
+</div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-note">
+      <span data-i18n="footer.copy">© 2026 轻与壮 · 可自由分享</span>
+      <a href="index.html" data-i18n="nav.home">首页</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/i18n/common.en.js"></script>
+<script src="assets/js/i18n/muscle.en.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/calculators.js"></script>
+</body>
+</html>

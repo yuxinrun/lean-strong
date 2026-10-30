@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title data-i18n="meta.fat.title">减脂减重完全指南 · 轻与壮</title>
+<meta name="description" content="从热量缺口、蛋白质、餐盘法到外卖点单、力量训练与平台期，一份能照着做的减脂指南，附计算器、图表与 4 周清单。" data-i18n-content="meta.fat.desc" data-zh-content="从热量缺口、蛋白质、餐盘法到外卖点单、力量训练与平台期，一份能照着做的减脂指南，附计算器、图表与 4 周清单。">
+<meta name="theme-color" content="#f7f3ea" media="(prefers-color-scheme: light)">
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem('ls-theme');
+      if (t !== 'light' && t !== 'dark') {
+        t = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+      document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+  })();
+</script>
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/pages.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%23bd5334'/%3E%3Ccircle cx='16' cy='16' r='7' fill='none' stroke='%23f7f3ea' stroke-width='3'/%3E%3C/svg%3E">
+</head>
+<body data-page="fat" class="theme-fat">
+
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html" aria-label="轻与壮">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span class="brand-name" data-i18n="brand.name">轻与壮</span>
+      <span class="brand-sub" data-i18n="brand.sub">Lean &amp; Strong</span>
+    </a>
+    <nav class="nav" id="siteNav" aria-label="主导航">
+      <a href="index.html" data-i18n="nav.home">首页</a>
+      <a href="fat-loss.html" class="is-active" data-i18n="nav.fat">减脂减重</a>
+      <a href="muscle-gain.html" data-i18n="nav.muscle">增肌增重</a>
+    </nav>
+    <div class="header-actions">
+      <button class="seg" id="langToggle" type="button" data-i18n-aria="nav.langAria" data-zh-aria="切换语言" aria-label="切换语言">
+        <span data-lang-label="zh" class="is-on">中</span>
+        <span data-lang-label="en">EN</span>
+      </button>
+      <button class="icon-btn" id="themeToggle" type="button" aria-pressed="false" data-i18n-aria="nav.themeAria" data-zh-aria="切换深色模式" aria-label="切换深色模式">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="4.2"></circle>
+          <path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.2 5.2l1.4 1.4M17.4 17.4l1.4 1.4M18.8 5.2l-1.4 1.4M6.6 17.4l-1.4 1.4"></path>
+        </svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true">
+          <path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z"></path>
+        </svg>
+      </button>
+      <button class="icon-btn nav-toggle" id="navToggle" type="button" aria-expanded="false" data-i18n-aria="nav.menuAria" data-zh-aria="打开菜单" aria-label="打开菜单">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ==================== 文章头部 ==================== -->
+<header class="article-hero">
+  <div class="wrap">
+    <div class="article-hero__inner">
+      <span class="chip chip--fat" data-i18n="fat.chip">路线 01 · 减脂减重</span>
+      <h1 data-i18n="fat.title">减脂不是少吃，是「少一点，久一点」</h1>
+      <p class="lead" data-i18n="fat.lead">
+        你可能已经试过少吃、跳操、断食。它们短期都有效——问题从来不是「有没有用」，
+        而是「能撑多久」。这篇讲清楚身体是怎么掉脂肪的，以及一个能撑过六个月的做法长什么样。
+      </p>
+
+      <div class="meta-bar">
+        <span class="i">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3.5 2"></path></svg>
+          <span data-i18n="fat.meta.time">约 18 分钟读完</span>
+        </span>
+        <span class="dot"></span>
+        <span class="i"><span data-i18n="fat.meta.sections">9 节 + 参考文献</span></span>
+        <span class="dot"></span>
+        <span class="i"><span data-i18n="fat.meta.updated">更新于 2026 年 10 月</span></span>
+        <span class="dot"></span>
+        <span class="evidence" data-i18n="fat.meta.evidence">依据：系统综述 + 随机对照试验</span>
+      </div>
+
+      <div class="takeaways">
+        <div class="takeaways__head">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9 17.5 20 6.5"></path></svg>
+          <span data-i18n="fat.takeaways.title">先看结论</span>
+        </div>
+        <ul>
+          <li><span class="n">01</span><span data-i18n="fat.tk1">掉秤不等于掉脂肪。体重里还有水、糖原、肠道内容和肌肉，一天之内上下 1–2 公斤是正常的。</span></li>
+          <li><span class="n">02</span><span data-i18n="fat.tk2">减脂只需要一个条件：持续的能量缺口。对普通人，每天 300–500 千卡、每周降 0.5–1% 体重，是最容易坚持的区间。</span></li>
+          <li><span class="n">03</span><span data-i18n="fat.tk3">蛋白质吃到每公斤体重 1.6–2.2 克，并且在减脂期一定要做力量训练——这两件事决定你掉的是脂肪还是肌肉。</span></li>
+          <li><span class="n">04</span><span data-i18n="fat.tk4">睡眠不足会直接改变结果：同样限制热量，睡 5.5 小时的人减掉的脂肪比睡 8.5 小时的人少一半以上。</span></li>
+          <li><span class="n">05</span><span data-i18n="fat.tk5">所谓「平台期」多半不是代谢坏了，而是日常活动量悄悄下降、吃饭开始随意。先查这两件事，再考虑继续减热量。</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ==================== 正文 ==================== -->
+<div class="wrap">
+  <div class="article-layout">
+
+    <aside class="toc" aria-label="本页目录">
+      <div class="toc__title" data-i18n="common.toc">本页目录</div>
+      <ol>
+        <li><a href="#logic"><span class="num">01</span><span data-i18n="fat.toc.1">掉脂肪的底层逻辑</span></a></li>
+        <li><a href="#calculator"><span class="num">02</span><span data-i18n="fat.toc.2">算出你自己的数字</span></a></li>
+        <li><a href="#eat"><span class="num">03</span><span data-i18n="fat.toc.3">吃：不用称重也能吃对</span></a></li>
+        <li><a href="#train"><span class="num">04</span><span data-i18n="fat.toc.4">练：保住肌肉才是真减脂</span></a></li>
+        <li><a href="#sleep"><span class="num">05</span><span data-i18n="fat.toc.5">睡与压力</span></a></li>
+        <li><a href="#plateau"><span class="num">06</span><span data-i18n="fat.toc.6">平台期与减完怎么办</span></a></li>
+        <li><a href="#myths"><span class="num">07</span><span data-i18n="fat.toc.7">七个流传很广的误区</span></a></li>
+        <li><a href="#plan"><span class="num">08</span><span data-i18n="fat.toc.8">4 周起步清单</span></a></li>
+        <li><a href="#refs"><span class="num">09</span><span data-i18n="fat.toc.9">参考资料</span></a></li>
+      </ol>
+    </aside>
+
+    <article class="prose">
+
+      <!-- 01 -->
+      <section id="logic">
+        <h2><span class="h2num">01</span><span data-i18n="fat.s1.h">掉脂肪的底层逻辑</span></h2>
+        <p class="section-lede" data-i18n="fat.s1.lede">先用五分钟把原理搞明白。原理清楚之后，所有「吃什么」「练什么」的问题都会自己回答。</p>
+
+        <h3 data-i18n="fat.s1.h3a">体重 ≠ 脂肪</h3>
+        <p data-i18n="fat.s1.p1">
+          站上秤看到的那个数字，至少由五部分组成：脂肪、肌肉、水分、肝糖原、肠道里的食物残渣。
+          其中水分和糖原的变化最快——多吃一顿火锅、多吃一天碳水、练完一次腿、生理期前一周，都可能让体重上下浮动 1–2 公斤，而脂肪几乎没有动。
+        </p>
+        <p data-i18n="fat.s1.p2">
+          所以体重秤是一个「噪音很大」的仪表。真正要看的，是 <strong>两周到四周的平均趋势</strong>，
+          加上腰围、衣服的松紧、以及力量训练时重量有没有掉。只看单日的数字，几乎一定会误判。
+        </p>
+
+        <h3 data-i18n="fat.s1.h3b">唯一的必要条件：能量缺口</h3>
+        <p data-i18n="fat.s1.p3">
+          脂肪是身体储存能量的仓库。只有当「消耗」持续大于「摄入」时，身体才会动用这个仓库。
+          这就是能量缺口——不需要断食、不需要戒碳水、不需要特定时间吃饭，但它必须存在。
+          净差值相同的两份食谱，一份低碳水、一份低脂肪，在 12 个月后的减重结果没有实质差别
+          <a href="#refs">[8][9]</a>。
+        </p>
+
+        <div class="callout callout--key">
+          <div class="callout__label" data-i18n="common.key">关键结论</div>
+          <p data-i18n="fat.s1.key">
+            1 公斤脂肪大约储存 7700 千卡。每天少吃 500 千卡、坚持一周，理论上约减 0.45 公斤脂肪。
+            现实通常会更慢一些，因为体重下降后消耗也在下降——这不是失败，是算术。
+          </p>
+        </div>
+
+        <figure class="figure chart" data-reveal>
+          <div class="figure__head">
+            <span class="figure__title" data-i18n="fat.s1.fig1.title">每天缺口多少，每周能掉多少脂肪</span>
+            <span class="figure__note" data-i18n="fat.s1.fig1.note">理论值，未计入代谢适应</span>
+          </div>
+          <div class="barchart" role="img" aria-label="柱状图：每日 250 千卡缺口约每周减 0.23 公斤，500 千卡约 0.45 公斤，750 千卡约 0.68 公斤，1000 千卡约 0.91 公斤">
+            <div class="bar-col">
+              <div class="bar" style="--v:0.25"><span class="bar__value">0.23</span></div>
+              <div class="bar__label" data-i18n="fat.s1.fig1.b1">250 千卡</div>
+            </div>
+            <div class="bar-col is-hot">
+              <div class="bar" style="--v:0.5"><span class="bar__value">0.45</span></div>
+              <div class="bar__label" data-i18n="fat.s1.fig1.b2">500 千卡</div>
+            </div>
+            <div class="bar-col is-hot">
+              <div class="bar" style="--v:0.75"><span class="bar__value">0.68</span></div>
+              <div class="bar__label" data-i18n="fat.s1.fig1.b3">750 千卡</div>
+            </div>
+            <div class="bar-col">
+              <div class="bar" style="--v:1"><span class="bar__value">0.91</span></div>
+              <div class="bar__label" data-i18n="fat.s1.fig1.b4">1000 千卡</div>
+            </div>
+          </div>
+          <figcaption data-i18n="fat.s1.fig1.cap">
+            纵轴为每周脂肪减少量（公斤）。深色两档是大多数人最适合的区间：快到看得见变化，又不至于饿到失控。
+          </figcaption>
+        </figure>
+
+        <h3 data-i18n="fat.s1.h3c">为什么不是缺口越大越好</h3>
+        <p data-i18n="fat.s1.p4">
+          缺口越大，掉秤确实越快，但代价会同时出现：训练时没力气、肌肉流失变多、饥饿激素上升、
+          而且日常小动作会不自觉地变少（能坐就不站、能电梯就不走）。最后的结果通常是——
+          撑了三周，然后一次性吃回来。研究里真正能长期维持的减重，几乎都来自 <strong>中等缺口 + 极高依从性</strong>。
+        </p>
+
+        <div class="table-wrap">
+          <table>
+            <caption data-i18n="fat.s1.table.cap">速率建议来自体脂水平与训练经验的实践经验，不是硬性规定；体脂越高，安全可用的速度越快。</caption>
+            <thead>
+              <tr>
+                <th data-i18n="fat.s1.table.h1">你的情况</th>
+                <th data-i18n="fat.s1.table.h2">每周目标</th>
+                <th data-i18n="fat.s1.table.h3">每日缺口约</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-i18n="fat.s1.table.r1c1">体脂较高（男 &gt;25% / 女 &gt;35%）</td>
+                <td data-i18n="fat.s1.table.r1c2">0.75–1% 体重</td>
+                <td class="num" data-i18n="fat.s1.table.r1c3">500–750 千卡</td>
+              </tr>
+              <tr>
+                <td data-i18n="fat.s1.table.r2c1">体脂中等（男 15–25% / 女 25–35%）</td>
+                <td data-i18n="fat.s1.table.r2c2">0.5–0.75% 体重</td>
+                <td class="num" data-i18n="fat.s1.table.r2c3">400–500 千卡</td>
+              </tr>
+              <tr>
+                <td data-i18n="fat.s1.table.r3c1">已经偏瘦（男 &lt;15% / 女 &lt;25%）</td>
+                <td data-i18n="fat.s1.table.r3c2">0.25–0.5% 体重</td>
+                <td class="num" data-i18n="fat.s1.table.r3c3">200–350 千卡</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="callout callout--myth">
+          <div class="callout__label" data-i18n="common.myth">常见误解</div>
+          <p data-i18n="fat.s1.myth">
+            「反复减肥把代谢搞坏了，所以现在喝水都胖。」——代谢适应确实存在，但幅度通常只有 5%–15%，
+            远小于人们以为的程度。减重变慢的主因是：体重轻了，同样的动作消耗更少；以及更隐蔽的——你吃得比你以为的多。
+          </p>
+        </div>
+      </section>
+
+      <!-- 02 -->
+      <section id="calculator">
+        <h2><span class="h2num">02</span><span data-i18n="fat.s2.h">算出你自己的数字</span></h2>
+        <p class="section-lede" data-i18n="fat.s2.lede">不用精确到个位数。算出区间，用两周的真实体重去校准，比任何公式都可靠。</p>
+
+        <p data-i18n="fat.s2.p1">
+          下面的计算器用的是 Mifflin-St Jeor 公式加活动系数，这是目前临床上最常用的估算方式，误差通常在 ±10–15%。
+          它给你的不是「正确答案」，而是一个合理的起点。
+        </p>
+
+        <div class="calc" id="calcFat">
+          <div class="calc__head">
+            <h3 data-i18n="fat.calc.title">减脂热量与蛋白质计算器</h3>
+            <p data-i18n="fat.calc.sub">输入 5 项，立刻得到每日热量与三大营养素</p>
+          </div>
+          <div class="calc__body">
+            <div class="field field--full">
+              <label data-i18n="fat.calc.sex">性别</label>
+              <div class="seg-ctl">
+                <label><input type="radio" name="fatSex" value="f" checked><span data-i18n="fat.calc.female">女性</span></label>
+                <label><input type="radio" name="fatSex" value="m"><span data-i18n="fat.calc.male">男性</span></label>
+              </div>
+            </div>
+            <div class="field">
+              <label for="fatAge" data-i18n="fat.calc.age">年龄</label>
+              <input id="fatAge" type="number" inputmode="numeric" min="14" max="90" step="1" value="30">
+            </div>
+            <div class="field">
+              <label for="fatHeight" data-i18n="fat.calc.height">身高（厘米）</label>
+              <input id="fatHeight" type="number" inputmode="numeric" min="130" max="220" step="1" value="165">
+            </div>
+            <div class="field">
+              <label for="fatWeight" data-i18n="fat.calc.weight">体重（公斤）</label>
+              <input id="fatWeight" type="number" inputmode="decimal" min="35" max="250" step="0.1" value="65">
+            </div>
+            <div class="field">
+              <label for="fatActivity" data-i18n="fat.calc.activity">日常活动量</label>
+              <select id="fatActivity">
+                <option value="1.2" data-i18n="fat.calc.act1">久坐（几乎不运动）</option>
+                <option value="1.375" selected data-i18n="fat.calc.act2">轻度（每周 1–3 次运动）</option>
+                <option value="1.55" data-i18n="fat.calc.act3">中度（每周 3–5 次运动）</option>
+                <option value="1.725" data-i18n="fat.calc.act4">高强度（每周 6–7 次）</option>
+                <option value="1.9" data-i18n="fat.calc.act5">极高（体力劳动 / 每天两练）</option>
+              </select>
+            </div>
+            <div class="field field--full">
+              <label for="fatRate" data-i18n="fat.calc.rate">减脂速度</label>
+              <select id="fatRate">
+                <option value="0.005" data-i18n="fat.calc.rate1">稳（每周约 0.5% 体重）</option>
+                <option value="0.0075" selected data-i18n="fat.calc.rate2">标准（每周约 0.75% 体重）· 推荐</option>
+                <option value="0.01" data-i18n="fat.calc.rate3">快（每周约 1% 体重）</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="calc__out" aria-live="polite">
+            <div class="calc__out-row">
+              <span class="k" data-i18n="fat.calc.tdee">每日维持热量</span>
+              <span class="v"><span data-out="fatTdee">—</span> <span data-i18n="unit.kcal">千卡</span></span>
+            </div>
+            <div class="calc__out-row">
+              <span class="k" data-i18n="fat.calc.target">每日目标摄入</span>
+              <span class="v big"><span data-out="fatTarget">—</span> <span data-i18n="unit.kcal">千卡</span></span>
+            </div>
+            <div class="calc__out-row">
+              <span class="k" data-i18n="fat.calc.deficit">每日缺口</span>
+              <span class="v"><span data-out="fatDeficit">—</span> <span data-i18n="unit.kcal">千卡</span></span>
+            </div>
+            <div class="calc__out-row">
+              <span class="k" data-i18n="fat.calc.weekly">预期每周下降</span>
+              <span class="v"><span data-out="fatWeekly">—</span> <span data-i18n="unit.kg">公斤</span></span>
+            </div>
+
+            <div class="macros">
+              <div class="macro">
+                <div class="macro__num" data-out="fatProtein">—</div>
+                <div class="macro__label" data-i18n="fat.calc.protein">蛋白质（克）</div>
+              </div>
+              <div class="macro">
+                <div class="macro__num" data-out="fatFat">—</div>
+                <div class="macro__label" data-i18n="fat.calc.fat">脂肪（克）</div>
+              </div>
+              <div class="macro">
+                <div class="macro__num" data-out="fatCarbs">—</div>
+                <div class="macro__label" data-i18n="fat.calc.carbs">碳水（克）</div>
+              </div>
+            </div>
+
+            <p class="calc__hint" data-i18n="fat.calc.hint">
+              蛋白质按 1.8 克/公斤估算，脂肪按 0.8 克/公斤保底，剩下的热量给碳水。碳水太低时训练会很难受，不必把它压到极低。
+            </p>
+            <p class="calc__hint" id="fatFloorNote" hidden data-i18n="fat.calc.floor">
+              注意：你选的速度会让摄入低于安全下限，已自动回调。想更快，优先加活动量，而不是继续减饭。
+            </p>
+          </div>
+        </div>
+
+        <h3 data-i18n="fat.s2.h3">怎么用两周体重校准它</h3>
+        <ol class="steps">
+          <li>
+            <strong data-i18n="fat.s2.st1t">每天同一时间称重</strong>
+            <p data-i18n="fat.s2.st1d">起床、上完厕所、没喝水之前。记录到手机里，不要每天评判自己。</p>
+          </li>
+          <li>
+            <strong data-i18n="fat.s2.st2t">周末算平均值，而不是看单日</strong>
+            <p data-i18n="fat.s2.st2d">七天平均值的对比才有意义。周平均掉了 0.4 公斤就是成功，哪怕某天涨了 0.8。</p>
+          </li>
+          <li>
+            <strong data-i18n="fat.s2.st3t">按结果微调，而不是按公式</strong>
+            <p data-i18n="fat.s2.st3d">两周平均几乎没动 → 减 100–150 千卡，或每天多走 1500 步。掉得比预期快很多、训练明显变差 → 加回 100–150 千卡。</p>
+          </li>
+        </ol>
+
+        <div class="callout callout--tip">
+          <div class="callout__label" data-i18n="common.tip">马上能做</div>
+          <p data-i18n="fat.s2.tip">
+            把算出来的「每日目标」和「蛋白质克数」写在手机备忘录第一行。接下来的一个月，你只需要看这两个数字，
+            不需要每天重新计算任何东西。
+          </p>
+        </div>
+      </section>
+
+      <!-- 03 -->
+      <section id="eat">
+        <h2><span class="h2num">03</span><span data-i18n="fat.s3.h">吃：不用称重也能吃对</span></h2>
+        <p class="section-lede" data-i18n="fat.s3.lede">你不需要厨房秤和食物数据库。先记住一个比例，再搞定三件事，就足够撑过大部分饭局。</p>
+
+        <h3 data-i18n="fat.s3.h3a">餐盘法：一个不需要计算的比例</h3>
+        <p data-i18n="fat.s3.p1">
+          拿一个普通的盘子，把它这样分：<strong>一半蔬菜</strong>（含菌菇、瓜类、绿叶菜）、
+          <strong>四分之一蛋白质</strong>（肉、鱼、蛋、豆腐）、<strong>四分之一主食</strong>（米饭、面、薯类、杂粮），
+          再加一拇指大小的油脂（炒菜用油、坚果、牛油果）。
+          这个比例不需要称重，却天然把热量控制在中等水平，同时保证了饱腹感和蛋白质。
+        </p>
+
+        <figure class="figure chart" data-reveal>
+          <div class="figure__head">
+            <span class="figure__title" data-i18n="fat.s3.fig.title">一餐的盘子长什么样</span>
+            <span class="figure__note" data-i18n="fat.s3.fig.note">每餐都套用这个比例</span>
+          </div>
+          <div class="donut-figure">
+            <svg class="donut" viewBox="0 0 200 200" role="img" aria-label="餐盘比例图：蔬菜一半，蛋白质四分之一，主食四分之一">
+              <circle cx="100" cy="100" r="70" fill="none" style="stroke:var(--bg-3)" stroke-width="26"></circle>
+              <circle class="seg" data-len="219.9" cx="100" cy="100" r="70" style="stroke:var(--brand)" stroke-dashoffset="0"></circle>
+              <circle class="seg" data-len="109.95" cx="100" cy="100" r="70" style="stroke:var(--fat)" stroke-dashoffset="-219.9"></circle>
+              <circle class="seg" data-len="109.95" cx="100" cy="100" r="70" style="stroke:var(--gold)" stroke-dashoffset="-329.85"></circle>
+              <text class="donut-center" x="100" y="97" text-anchor="middle" font-size="26" data-i18n-text="fat.s3.fig.center">50%</text>
+              <text class="donut-sub" x="100" y="116" text-anchor="middle" font-size="11" data-i18n-text="fat.s3.fig.sub">蔬菜</text>
+            </svg>
+            <ul class="donut-legend">
+              <li><span class="swatch" style="background:var(--brand)"></span><span><strong data-i18n="fat.s3.leg1t">一半：蔬菜</strong><br><span data-i18n="fat.s3.leg1d">绿叶菜、菌菇、瓜类、番茄。体积大、热量低，是饱腹感的主要来源。</span></span></li>
+              <li><span class="swatch" style="background:var(--fat)"></span><span><strong data-i18n="fat.s3.leg2t">四分之一：蛋白质</strong><br><span data-i18n="fat.s3.leg2d">鱼、虾、鸡、瘦牛肉、蛋、豆腐。一餐的目标是 25–40 克蛋白质。</span></span></li>
+              <li><span class="swatch" style="background:var(--gold)"></span><span><strong data-i18n="fat.s3.leg3t">四分之一：主食</strong><br><span data-i18n="fat.s3.leg3d">优先杂粮、薯类、意面。碳水不是敌人，它是训练日的燃料。</span></span></li>
+            </ul>
+          </div>
+          <figcaption data-i18n="fat.s3.fig.cap">如果某一餐蛋白质不够，最简单的补法：加两个鸡蛋、一盒无糖酸奶，或一勺蛋白粉。</figcaption>
+        </figure>
+
+        <h3 data-i18n="fat.s3.h3b">蛋白质：减脂期最不该省的一项</h3>
+        <p data-i18n="fat.s3.p2">
+          在同等热量缺口下，蛋白质吃得多的人，减掉的体重里脂肪占比更高、肌肉保留得更好。
+          元分析显示，力量训练配合蛋白质补充时，<strong>每公斤体重约 1.6 克</strong>是收益的拐点；
+          再往上加，对多数人收益很小<a href="#refs">[4][5]</a>。减脂期因为总热量偏低，通常建议落在 1.6–2.2 克这个区间。
+        </p>
+        <p data-i18n="fat.s3.p3">
+          两个操作要点：<strong>分散到 3–5 餐</strong>，每餐 25–40 克；<strong>早餐就开始吃</strong>，
+          因为大部分人早餐的蛋白质几乎为零，而早餐吃得越有蛋白，全天的饥饿感和零食冲动越少。
+        </p>
+
+        <div class="table-wrap">
+          <table>
+            <caption data-i18n="fat.s3.table.cap">数值为常见份量的近似值，不同品牌与做法会有差异；用它来建立「一份大概多少」的直觉即可。</caption>
+            <thead>
+              <tr>
+                <th data-i18n="fat.s3.table.h1">食物</th>
+                <th data-i18n="fat.s3.table.h2">常见份量</th>
+                <th data-i18n="fat.s3.table.h3">蛋白质</th>
+                <th data-i18n="fat.s3.table.h4">热量</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td data-i18n="fat.s3.table.r1c1">鸡蛋</td><td data-i18n="fat.s3.table.r1c2">1 个（约 50 g）</td><td class="num">6 g</td><td class="num">72 kcal</td></tr>
+              <tr><td data-i18n="fat.s3.table.r2c1">鸡胸肉</td><td data-i18n="fat.s3.table.r2c2">100 g</td><td class="num">31 g</td><td class="num">165 kcal</td></tr>
+              <tr><td data-i18n="fat.s3.table.r3c1">瘦牛肉</td><td data-i18n="fat.s3.table.r3c2">100 g</td><td class="num">26 g</td><td class="num">250 kcal</td></tr>
+              <tr><td data-i18n="fat.s3.table.r4c1">三文鱼</td><td data-i18n="fat.s3.table.r4c2">100 g</td><td class="num">20 g</td><td class="num">208 kcal</td></tr>
+              <tr><td data-i18n="fat.s3.table.r5c1">虾</td><td data-i18n="fat.s3.table.r5c2">100 g</td><td class="num">20 g</td><td class="num">99 kcal</td></tr>
+              <tr><td data-i18n="fat.s3.table.r6c1">北豆腐</td><td data-i18n="fat.s3.table.r6c2">100 g</td><td class="num">12 g</td><td class="num">116 kcal</td></tr>
+              <tr><td data-i18n="fat.s3.table.r7c1">无糖希腊酸奶</td><td data-i18n="fat.s3.table.r7c2">150 g</td><td class="num">15 g</td><td class="num">90 kcal</td></tr>
+              <tr><td data-i18n="fat.s3.table.r8c1">牛奶</td><td data-i18n="fat.s3.table.r8c2">250 ml</td><td class="num">8 g</td><td class="num">130 kcal</td></tr>
+              <tr><td data-i18n="fat.s3.table.r9c1">乳清蛋白粉</td><td data-i18n="fat.s3.table.r9c2">1 勺（30 g）</td><td class="num">24 g</td><td class="num">120 kcal</td></tr>
+              <tr><td data-i18n="fat.s3.table.r10c1">无糖豆浆</td><td data-i18n="fat.s3.table.r10c2">300 ml</td><td class="num">9 g</td><td class="num">90 kcal</td></tr>
+              <tr><td data-i18n="fat.s3.table.r11c1">毛豆</td><td data-i18n="fat.s3.table.r11c2">100 g</td><td class="num">11 g</td><td class="num">131 kcal</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 data-i18n="fat.s3.h3c">饱腹感四件套</h3>
+        <p data-i18n="fat.s3.p4">
+          减脂期真正的敌人不是热量，是饿。这四个变量对饱腹感的影响，比「吃什么牌子的代餐」大得多：
+        </p>
+        <ul>
+          <li data-i18n="fat.s3.li1"><strong>蛋白质</strong>：同样热量下，蛋白质最抗饿，还能保住肌肉。</li>
+          <li data-i18n="fat.s3.li2"><strong>纤维</strong>：每天 25–30 克，来自蔬菜、豆类、全谷、水果。体积大、消化慢。</li>
+          <li data-i18n="fat.s3.li3"><strong>水</strong>：饭前一杯水，能明显降低这一餐的摄入量。含糖饮料则是反方向。</li>
+          <li data-i18n="fat.s3.li4"><strong>速度</strong>：一顿饭吃 20 分钟以上。饱腹信号从胃传到大脑需要时间，吃太快就会吃超。</li>
+        </ul>
+
+        <h3 data-i18n="fat.s3.h3d">外卖和中餐怎么点：六个真实场景</h3>
+        <p data-i18n="fat.s3.p5">绝大多数人不是天天自己做饭。好消息是：<strong>外卖完全可以减脂</strong>，只要改三个动作——换锅底、加蛋白质、少酱汁。</p>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th data-i18n="fat.s3.out.h1">场景</th>
+                <th data-i18n="fat.s3.out.h2">怎么点</th>
+                <th data-i18n="fat.s3.out.h3">要避开的</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td data-i18n="fat.s3.out.r1c1">麻辣烫</td><td data-i18n="fat.s3.out.r1c2">清汤或番茄锅，多选绿叶菜、菌菇、豆腐、瘦肉片，主食选红薯或玉米</td><td data-i18n="fat.s3.out.r1c3">丸子、油豆皮、宽粉；麻酱最多半勺</td></tr>
+              <tr><td data-i18n="fat.s3.out.r2c1">快餐汉堡</td><td data-i18n="fat.s3.out.r2c2">单层肉饼 + 无糖饮料，再单点一份沙拉或烤鸡</td><td data-i18n="fat.s3.out.r2c3">双层、套餐薯条、含糖饮料</td></tr>
+              <tr><td data-i18n="fat.s3.out.r3c1">食堂</td><td data-i18n="fat.s3.out.r3c2">一荤两素 + 半份米饭，先吃菜和肉，最后吃主食</td><td data-i18n="fat.s3.out.r3c3">糖醋、油炸、勾芡类；汤汁不要拌饭</td></tr>
+              <tr><td data-i18n="fat.s3.out.r4c1">火锅</td><td data-i18n="fat.s3.out.r4c2">清汤锅，涮肉片、豆腐、蔬菜、菌菇，主食一小份</td><td data-i18n="fat.s3.out.r4c3">香油碟、酥肉、丸子、无限续的饮料</td></tr>
+              <tr><td data-i18n="fat.s3.out.r5c1">面食</td><td data-i18n="fat.s3.out.r5c2">加一份牛肉或两个蛋，面只吃三分之二</td><td data-i18n="fat.s3.out.r5c3">把汤喝完——钠含量很高，第二天容易水肿</td></tr>
+              <tr><td data-i18n="fat.s3.out.r6c1">奶茶</td><td data-i18n="fat.s3.out.r6c2">无糖或微糖、不加料；或者直接美式 / 气泡水</td><td data-i18n="fat.s3.out.r6c3">全糖 500 ml 约 350–450 千卡，等于一顿正餐</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 data-i18n="fat.s3.h3e">一天长什么样（约 1600 千卡 / 115 克蛋白质）</h3>
+        <div class="meal-grid">
+          <div class="meal">
+            <div class="meal__k" data-i18n="fat.s3.m1k">早餐<span>7:30</span></div>
+            <div>
+              <p data-i18n="fat.s3.m1d">两个水煮蛋 + 一杯无糖豆浆 + 一个玉米或半个全麦馒头。赶时间就换成：希腊酸奶 + 燕麦 + 蓝莓。</p>
+              <p class="meal__macros" data-i18n="fat.s3.m1m">约 400 千卡 · 蛋白质 25 克</p>
+            </div>
+          </div>
+          <div class="meal">
+            <div class="meal__k" data-i18n="fat.s3.m2k">午餐<span>12:30</span></div>
+            <div>
+              <p data-i18n="fat.s3.m2d">半碗米饭 + 鸡胸或瘦牛肉 150 克 + 两份炒蔬菜（少油）。</p>
+              <p class="meal__macros" data-i18n="fat.s3.m2m">约 550 千卡 · 蛋白质 45 克</p>
+            </div>
+          </div>
+          <div class="meal">
+            <div class="meal__k" data-i18n="fat.s3.m3k">加餐<span>16:00</span></div>
+            <div>
+              <p data-i18n="fat.s3.m3d">无糖希腊酸奶 150 克 + 一小把坚果（约 15 克）。</p>
+              <p class="meal__macros" data-i18n="fat.s3.m3m">约 200 千卡 · 蛋白质 16 克</p>
+            </div>
+          </div>
+          <div class="meal">
+            <div class="meal__k" data-i18n="fat.s3.m4k">晚餐<span>19:00</span></div>
+            <div>
+              <p data-i18n="fat.s3.m4d">杂粮饭半碗 + 鱼或虾 150 克 + 大量蔬菜 + 一勺油。</p>
+              <p class="meal__macros" data-i18n="fat.s3.m4m">约 450 千卡 · 蛋白质 30 克</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="callout callout--warn">
+          <div class="callout__label" data-i18n="common.warn">小心这些坑</div>
+          <p data-i18n="fat.s3.warn">
+            液体热量最容易被忽略：奶茶、果汁、拿铁、啤酒。它们几乎不产生饱腹感，却能轻松吃掉你一半的缺口。
+            另外，<strong>一勺油约 90 千卡</strong>——「少油」这两个字在中餐里的价值，比你以为的大得多。
+          </p>
+        </div>
+      </section>
+
+      <!-- 04 -->
+      <section id="train">
+        <h2><span class="h2num">04</span><span data-i18n="fat.s4.h">练：保住肌肉才是真减脂</span></h2>
+        <p class="section-lede" data-i18n="fat.s4.lede">同样减掉 5 公斤，一个人看起来紧实、一个人看起来松垮，差别就在肌肉。</p>
+
+        <p data-i18n="fat.s4.p1">
+          在只靠节食、不运动的减重里，下降的体重中可能有 20%–30% 来自肌肉。肌肉越少，静息消耗越低，
+          下一个阶段的减脂就越难，而且体态会明显「塌」。两条对策，代价都不高：
+          <strong>每周 2–3 次力量训练</strong>，加上<strong>每公斤体重 1.6 克以上的蛋白质</strong>。
+        </p>
+
+        <div class="callout callout--key">
+          <div class="callout__label" data-i18n="common.key">关键结论</div>
+          <p data-i18n="fat.s4.key">
+            力量训练在减脂期的角色不是「多烧热量」，而是「告诉身体：这些肌肉还有用，别拆」。
+            它消耗的热量其实不高，但它保护的是你未来的基础代谢和身材。
+          </p>
+        </div>
+
+        <h3 data-i18n="fat.s4.h3a">一个照抄就能用的力量模板</h3>
+        <p data-i18n="fat.s4.p2">每周两次全身训练，每次 40 分钟。每个动作做 3 组，组间休息 90–120 秒，重量选在「最后两次有点吃力但动作不变形」的程度。</p>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th data-i18n="fat.s4.t.h1">动作</th>
+                <th data-i18n="fat.s4.t.h2">组 × 次</th>
+                <th data-i18n="fat.s4.t.h3">要点</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td data-i18n="fat.s4.t.r1c1">深蹲 / 腿举</td><td class="num">3 × 8–12</td><td data-i18n="fat.s4.t.r1c3">膝盖朝脚尖方向，全程控制</td></tr>
+              <tr><td data-i18n="fat.s4.t.r2c1">卧推 / 俯卧撑</td><td class="num">3 × 8–12</td><td data-i18n="fat.s4.t.r2c3">肩胛收紧，别塌腰</td></tr>
+              <tr><td data-i18n="fat.s4.t.r3c1">坐姿划船 / 哑铃划船</td><td class="num">3 × 10–12</td><td data-i18n="fat.s4.t.r3c3">想象把肩胛骨往中间夹</td></tr>
+              <tr><td data-i18n="fat.s4.t.r4c1">罗马尼亚硬拉</td><td class="num">3 × 8–12</td><td data-i18n="fat.s4.t.r4c3">髋往后推，背保持平直</td></tr>
+              <tr><td data-i18n="fat.s4.t.r5c1">哑铃肩推</td><td class="num">2–3 × 10–12</td><td data-i18n="fat.s4.t.r5c3">不要为了更重而弓腰</td></tr>
+              <tr><td data-i18n="fat.s4.t.r6c1">平板支撑 / 卷腹</td><td class="num">2–3 × 30–45 秒</td><td data-i18n="fat.s4.t.r6c3">收紧腹部，正常呼吸</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 data-i18n="fat.s4.h3b">有氧：不是越多越好，是刚刚好</h3>
+        <p data-i18n="fat.s4.p3">
+          每周 150–300 分钟中等强度有氧（快走、骑车、游泳、爬楼），或 75–150 分钟高强度，
+          是公认的推荐范围。它的价值在于扩大缺口、改善心肺和情绪，而不是「练哪瘦哪」。
+          如果力量训练做得很认真，有氧控制在 2–3 次、每次 30–40 分钟就够，剩下的用日常走路补。
+        </p>
+
+        <figure class="figure chart" data-reveal>
+          <div class="figure__head">
+            <span class="figure__title" data-i18n="fat.s4.fig.title">不同运动的消耗差异（约 60 公斤成人）</span>
+            <span class="figure__note" data-i18n="fat.s4.fig.note">估算值，仅供参考</span>
+          </div>
+          <div class="hbars">
+            <div class="hbar-row">
+              <span class="hbar-row__label" data-i18n="fat.s4.fig.l1">快走 30 分钟</span>
+              <span class="hbar-track"><span class="hbar-fill" style="--v:52%"></span></span>
+              <span class="hbar-row__value">130</span>
+            </div>
+            <div class="hbar-row">
+              <span class="hbar-row__label" data-i18n="fat.s4.fig.l2">力量训练 40 分钟</span>
+              <span class="hbar-track"><span class="hbar-fill" style="--v:64%"></span></span>
+              <span class="hbar-row__value">160</span>
+            </div>
+            <div class="hbar-row">
+              <span class="hbar-row__label" data-i18n="fat.s4.fig.l3">骑车 30 分钟</span>
+              <span class="hbar-track"><span class="hbar-fill" style="--v:80%"></span></span>
+              <span class="hbar-row__value">200</span>
+            </div>
+            <div class="hbar-row">
+              <span class="hbar-row__label" data-i18n="fat.s4.fig.l4">慢跑 30 分钟</span>
+              <span class="hbar-track"><span class="hbar-fill" style="--v:100%"></span></span>
+              <span class="hbar-row__value">250</span>
+            </div>
+          </div>
+          <figcaption data-i18n="fat.s4.fig.cap">
+            单位：千卡。注意：40 分钟力量训练只消耗约 160 千卡，但它换来的是肌肉保留和更高的长期消耗——不要只用「当场烧多少」来评价运动。
+          </figcaption>
+        </figure>
+
+        <p data-i18n="fat.s4.p4">
+          还有一个被低估的变量：<strong>日常活动量（NEAT）</strong>——走路、站立、爬楼、做家务。
+          两个人可能都没「健身」，但一天下来消耗能差 200–400 千卡。这就是为什么「每天 7000–9000 步」
+          经常比「多跑 20 分钟」更容易执行，也更有效。
+        </p>
+
+        <div class="callout callout--myth">
+          <div class="callout__label" data-i18n="common.myth">常见误解</div>
+          <p data-i18n="fat.s4.myth">
+            「练腹肌能减肚子」——不能。脂肪的消耗是全身性的，先减哪里由基因和激素决定。
+            卷腹只能让腹肌变厚，不能优先烧掉腹部脂肪。<strong>局部减脂不存在。</strong>
+          </p>
+        </div>
+
+        <h3 data-i18n="fat.s4.h3c">一周怎么排</h3>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th data-i18n="fat.s4.w.h1">星期</th>
+                <th data-i18n="fat.s4.w.h2">安排</th>
+                <th data-i18n="fat.s4.w.h3">时长</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td data-i18n="fat.s4.w.d1">周一</td><td data-i18n="fat.s4.w.p1">力量训练 A（全身）</td><td class="num">40 分钟</td></tr>
+              <tr><td data-i18n="fat.s4.w.d2">周二</td><td data-i18n="fat.s4.w.p2">快走 40 分钟 + 走到 8000 步</td><td class="num">40 分钟</td></tr>
+              <tr><td data-i18n="fat.s4.w.d3">周三</td><td data-i18n="fat.s4.w.p3">休息 / 拉伸 / 散步</td><td class="num">20 分钟</td></tr>
+              <tr><td data-i18n="fat.s4.w.d4">周四</td><td data-i18n="fat.s4.w.p4">力量训练 B（全身）</td><td class="num">40 分钟</td></tr>
+              <tr><td data-i18n="fat.s4.w.d5">周五</td><td data-i18n="fat.s4.w.p5">骑车或游泳 + 8000 步</td><td class="num">40 分钟</td></tr>
+              <tr><td data-i18n="fat.s4.w.d6">周六</td><td data-i18n="fat.s4.w.p6">喜欢的运动（球类、爬山、跳舞）</td><td class="num">随意</td></tr>
+              <tr><td data-i18n="fat.s4.w.d7">周日</td><td data-i18n="fat.s4.w.p7">散步 + 备餐（把下周的蛋白质做好）</td><td class="num">30 分钟</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- 05 -->
+      <section id="sleep">
+        <h2><span class="h2num">05</span><span data-i18n="fat.s5.h">睡与压力：被忽略的那一半</span></h2>
+        <p class="section-lede" data-i18n="fat.s5.lede">你可以在饮食上做到 90 分，然后用睡 5 小时把它打回 60 分。</p>
+
+        <p data-i18n="fat.s5.p1">
+          一项经典的住院代谢研究，把同样处于热量缺口的人分成两组：一组每晚有 8.5 小时睡眠机会，另一组只有 5.5 小时。
+          结果是——两组掉的总体重接近，但<strong>睡眠不足组减掉的脂肪只有 0.6 公斤，而充足组是 1.4 公斤</strong>；
+          同时睡眠不足组饿得更厉害，掉掉的瘦体重更多<a href="#refs">[6]</a>。
+          换句话说：同样的自律，睡眠决定了这部分自律用来减脂还是减肌肉。
+        </p>
+
+        <figure class="figure chart" data-reveal>
+          <div class="figure__head">
+            <span class="figure__title" data-i18n="fat.s5.fig.title">同样限制热量，睡眠 8.5 小时 vs 5.5 小时</span>
+            <span class="figure__note" data-i18n="fat.s5.fig.note">单位：公斤脂肪</span>
+          </div>
+          <div class="barchart" role="img" aria-label="柱状图：睡 8.5 小时减掉 1.4 公斤脂肪，睡 5.5 小时只减掉 0.6 公斤">
+            <div class="bar-col is-hot">
+              <div class="bar" style="--v:0.875"><span class="bar__value">1.4</span></div>
+              <div class="bar__label" data-i18n="fat.s5.fig.b1">睡 8.5 小时</div>
+            </div>
+            <div class="bar-col">
+              <div class="bar" style="--v:0.375"><span class="bar__value">0.6</span></div>
+              <div class="bar__label" data-i18n="fat.s5.fig.b2">睡 5.5 小时</div>
+            </div>
+          </div>
+          <figcaption data-i18n="fat.s5.fig.cap">
+            数据来自 10 名超重成年人的住院交叉试验（Nedeltcheva 等，<em>Annals of Internal Medicine</em>，2010）。样本很小，但方向与后续大量研究一致。
+          </figcaption>
+        </figure>
+
+        <h3 data-i18n="fat.s5.h3a">五件今晚就能改的事</h3>
+        <ol class="steps">
+          <li>
+            <strong data-i18n="fat.s5.st1t">固定起床时间，而不是固定睡觉时间</strong>
+            <p data-i18n="fat.s5.st1d">起床时间稳定了，入睡时间会自己跟上。这是调整作息最省力的一招。</p>
+          </li>
+          <li>
+            <strong data-i18n="fat.s5.st2t">咖啡因在下午 2 点前结束</strong>
+            <p data-i18n="fat.s5.st2d">咖啡因的半衰期约 5–6 小时。下午那杯拿铁，到你躺下时还在起作用。</p>
+          </li>
+          <li>
+            <strong data-i18n="fat.s5.st3t">睡前 1 小时把灯调暗</strong>
+            <p data-i18n="fat.s5.st3d">强光是「现在还是白天」的信号。把顶灯换成小灯，屏幕调暗，入睡会明显变快。</p>
+          </li>
+          <li>
+            <strong data-i18n="fat.s5.st4t">卧室稍微凉一点</strong>
+            <p data-i18n="fat.s5.st4d">18–22℃ 通常最舒适。太热会打断深睡。</p>
+          </li>
+          <li>
+            <strong data-i18n="fat.s5.st5t">睡前 3 小时不吃大餐，也别用酒精助眠</strong>
+            <p data-i18n="fat.s5.st5d">酒精让人更快入睡，但会破坏后半夜的深睡眠，第二天更想吃高热量食物。</p>
+          </li>
+        </ol>
+
+        <div class="callout callout--tip">
+          <div class="callout__label" data-i18n="common.tip">马上能做</div>
+          <p data-i18n="fat.s5.tip">
+            如果最近压力大、总想吃东西，先别急着改饮食。连续一周把睡眠补到 7 小时以上，
+            很多人会发现「控制食欲」这件事突然变简单了——因为缺觉本身就会把食欲推向高糖高脂。
+          </p>
+        </div>
+      </section>
+
+      <!-- 06 -->
+      <section id="plateau">
+        <h2><span class="h2num">06</span><span data-i18n="fat.s6.h">平台期与减完怎么办</span></h2>
+        <p class="section-lede" data-i18n="fat.s6.lede">平台期不是身体的逆袭，而是几件小事同时发生。找到是哪一件，比继续少吃有用得多。</p>
+
+        <p data-i18n="fat.s6.p1">
+          真实的减重曲线从来不是直线。它更像台阶：先掉一截，停两三周，再掉一截。
+          这一节讲的不是「怎么更快」，而是「怎么不在台阶上放弃」。
+        </p>
+
+        <figure class="figure chart" data-reveal>
+          <div class="figure__head">
+            <span class="figure__title" data-i18n="fat.s6.fig.title">真实的减重曲线长这样（示意）</span>
+            <span class="figure__note" data-i18n="fat.s6.fig.note">12 周</span>
+          </div>
+          <svg class="linechart" viewBox="0 0 640 260" role="img" aria-label="折线图：体重在第 4 到 6 周出现平台，之后继续下降；虚线为理想趋势">
+            <g class="grid">
+              <line x1="60" y1="75" x2="600" y2="75"></line>
+              <line x1="60" y1="120" x2="600" y2="120"></line>
+              <line x1="60" y1="165" x2="600" y2="165"></line>
+              <line x1="60" y1="210" x2="600" y2="210"></line>
+            </g>
+            <text class="axis-text" x="46" y="79" text-anchor="end">78</text>
+            <text class="axis-text" x="46" y="124" text-anchor="end">76</text>
+            <text class="axis-text" x="46" y="169" text-anchor="end">74</text>
+            <text class="axis-text" x="46" y="214" text-anchor="end">72</text>
+            <text class="axis-text" x="60" y="236" text-anchor="start" data-i18n-text="fat.s6.fig.x1">第 1 周</text>
+            <text class="axis-text" x="600" y="236" text-anchor="end" data-i18n-text="fat.s6.fig.x2">第 12 周</text>
+            <text class="axis-text" x="60" y="30" text-anchor="start" data-i18n-text="fat.s6.fig.unit">体重 / 公斤</text>
+            <path class="line-path line-path--dashed" d="M60,75 L600,213"></path>
+            <path class="area-fill" d="M60,75 L105,93 L150,108 L195,126 L240,132 L285,135 L330,141 L375,159 L420,168 L465,180 L510,189 L555,198 L600,213 L600,215 L60,215 Z"></path>
+            <path class="line-path" d="M60,75 L105,93 L150,108 L195,126 L240,132 L285,135 L330,141 L375,159 L420,168 L465,180 L510,189 L555,198"></path>
+            <circle class="dot" cx="285" cy="135" r="4"></circle>
+            <text class="axis-text" x="285" y="118" text-anchor="middle" data-i18n-text="fat.s6.fig.mark">平台期</text>
+            <line x1="285" y1="140" x2="285" y2="158" stroke="var(--line-strong)" stroke-dasharray="3 3" stroke-width="1"></line>
+          </svg>
+          <figcaption data-i18n="fat.s6.fig.cap">
+            虚线是「理论上的直线」。真实曲线会有水分波动、平台和反弹——只要长期斜向下，就是在掉脂。
+          </figcaption>
+        </figure>
+
+        <h3 data-i18n="fat.s6.h3a">先问自己三个问题</h3>
+        <ol class="steps">
+          <li>
+            <strong data-i18n="fat.s6.q1t">连续三周的平均体重，真的一点没动吗？</strong>
+            <p data-i18n="fat.s6.q1d">单日体重不足以判断平台。要看 21 天的平均值，否则你可能在为一次水肿焦虑。</p>
+          </li>
+          <li>
+            <strong data-i18n="fat.s6.q2t">腰围、裤子、镜子有变化吗？</strong>
+            <p data-i18n="fat.s6.q2d">如果体重没变但腰围小了，那就是在「重组」：脂肪在掉、肌肉在长。这不算平台。</p>
+          </li>
+          <li>
+            <strong data-i18n="fat.s6.q3t">你真的还在按计划吃吗？</strong>
+            <p data-i18n="fat.s6.q3d">这是最常见的原因。周末两顿放开、酱料和饮料、随手吃的坚果——不需要很多，一天 200 千卡就能把缺口抹平。</p>
+          </li>
+        </ol>
+
+        <h3 data-i18n="fat.s6.h3b">五个办法，按顺序试</h3>
+        <ul>
+          <li data-i18n="fat.s6.li1"><strong>先增加活动量。</strong>加 1500–2000 步，或每周多加一次有氧。这比再砍 200 千卡更容易坚持，也不容易掉肌肉。</li>
+          <li data-i18n="fat.s6.li2"><strong>把蛋白质提到 2 克/公斤。</strong>它抗饿、护肌肉，而且增加消化本身的消耗。</li>
+          <li data-i18n="fat.s6.li3"><strong>只减碳水或脂肪，不要两个一起减。</strong>训练日碳水多一点，力量表现会明显不同。</li>
+          <li data-i18n="fat.s6.li4"><strong>安排一周饮食休息。</strong>连续减了 8–12 周后，用 1–2 周吃到维持热量。饥饿激素会回落，训练状态会回升，之后更容易继续。</li>
+          <li data-i18n="fat.s6.li5"><strong>重新算一次数字。</strong>体重轻了，维持热量也降了。用旧的数字要求新的身体，本来就会停滞。</li>
+        </ul>
+
+        <div class="callout callout--key">
+          <div class="callout__label" data-i18n="common.key">关键结论</div>
+          <p data-i18n="fat.s6.key">
+            平台期优先加「消耗」和「睡眠」，最后才减「摄入」。
+            因为绝大多数人的瓶颈不是缺口不够大，而是缺口维持不下去。
+          </p>
+        </div>
+
+        <h3 data-i18n="fat.s6.h3c">减完以后：真正重要的那六个月</h3>
+        <p data-i18n="fat.s6.p2">
+          减重不难，难的是不反弹。长期随访研究里，能够维持住减重的人有一些共同点：
+          持续监测体重（每周固定称）、保持较高的身体活动量、早餐规律、以及不把「偶尔吃多」当成失败<a href="#refs">[11]</a>。
+        </p>
+        <p data-i18n="fat.s6.p3">
+          另两个数字值得记住：<strong>降低 5%–10% 的体重，就能明显改善血压、血糖和血脂</strong>；
+          所以如果你 80 公斤，目标不一定是「减到 60」，把 4–8 公斤稳住，健康收益已经大部分到手。
+        </p>
+
+        <div class="callout callout--tip">
+          <div class="callout__label" data-i18n="common.tip">马上能做</div>
+          <p data-i18n="fat.s6.tip">
+            在减脂接近尾声时，提前想好「维持期」的规则：热量回到维持值、蛋白质和力量训练照旧、
+            每周称一次体重，超过某个数字（比如「不超过目标 2 公斤」）就重启两周小缺口。
+            提前设定规则，比临时靠意志力可靠得多。
+          </p>
+        </div>
+      </section>
+
+      <!-- 07 -->
+      <section id="myths">
+        <h2><span class="h2num">07</span><span data-i18n="fat.s7.h">七个流传很广的误区</span></h2>
+        <p class="section-lede" data-i18n="fat.s7.lede">这些说法之所以传得开，是因为它们都「有一点点真」，然后被夸大成了错的结论。</p>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th data-i18n="fat.s7.h1">你听过的说法</th>
+                <th data-i18n="fat.s7.h2">实际是怎么回事</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-i18n="fat.s7.r1c1">出汗多就是燃烧脂肪多</td>
+                <td data-i18n="fat.s7.r1c2">出汗只是散热。裹保鲜膜跑一小时，掉的体重全是水，喝回来就涨回去。真正决定脂肪减少的是总缺口。</td>
+              </tr>
+              <tr>
+                <td data-i18n="fat.s7.r2c1">空腹有氧燃脂更高效</td>
+                <td data-i18n="fat.s7.r2c2">空腹时确实更多动用脂肪供能，但把时间拉到 24 小时看，总脂肪氧化差不多。决定结果的是全天缺口，而不是这一次训练烧的是什么。</td>
+              </tr>
+              <tr>
+                <td data-i18n="fat.s7.r3c1">不吃晚饭瘦得快</td>
+                <td data-i18n="fat.s7.r3c2">本质还是少了一餐的热量。如果你因此半夜饿醒、第二天补偿性多吃，效果反而更差。把三餐分配到不饿的节奏，比硬扛更可持续。</td>
+              </tr>
+              <tr>
+                <td data-i18n="fat.s7.r4c1">代餐、减肥茶、酵素能「排油」</td>
+                <td data-i18n="fat.s7.r4c2">代餐是「控制热量的工具」，短期有效但难长期维持；减肥茶多为刺激性泻药，减的是水和肠道内容；酵素在胃里就被分解成氨基酸，起不到「分解脂肪」的作用。</td>
+              </tr>
+              <tr>
+                <td data-i18n="fat.s7.r5c1">有氧越多，瘦得越快</td>
+                <td data-i18n="fat.s7.r5c2">过量有氧（每周 6 次以上高强度）叠加较大缺口时，肌肉流失、疲劳、受伤、以及「越练越想吃」都会同时出现。有氧是配菜，不是主食。</td>
+              </tr>
+              <tr>
+                <td data-i18n="fat.s7.r6c1">每天称体重会焦虑，所以不该称</td>
+                <td data-i18n="fat.s7.r6c2">回避反而会失控。更好的做法是每天称、但只看 7 天平均值；或者每周固定三天称一次，同样能看出趋势。</td>
+              </tr>
+              <tr>
+                <td data-i18n="fat.s7.r7c1">体重掉了就是成功了</td>
+                <td data-i18n="fat.s7.r7c2">掉的可能一半是肌肉和水。同样是减 5 公斤，肌肉少的人更松弛、代谢更低。所以体脂率、围度、力量表现，都比单纯体重更值得记录。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- 08 -->
+      <section id="plan">
+        <h2><span class="h2num">08</span><span data-i18n="fat.s8.h">4 周起步清单</span></h2>
+        <p class="section-lede" data-i18n="fat.s8.lede">不要一次改十件事。每周只加两三件，让新习惯长在旧生活里。勾选状态只保存在你本机。</p>
+
+        <div class="checklist" data-checklist="fat4w">
+          <label class="check"><input type="checkbox" value="f1"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"></path></svg></span><span class="check__text" data-i18n="fat.s8.i1"><strong>第 1 周</strong>：连续三天早上空腹称重，把平均值记下来作为起点</span></label>
+          <label class="check"><input type="checkbox" value="f2"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"></path></svg></span><span class="check__text" data-i18n="fat.s8.i2">用上面的计算器算出维持热量、目标热量和蛋白质克数，写进手机备忘录</span></label>
+          <label class="check"><input type="checkbox" value="f3"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"></path></svg></span><span class="check__text" data-i18n="fat.s8.i3">记录三天饮食（不改变，只记录），找出热量最高的那两样东西</span></label>
+          <label class="check"><input type="checkbox" value="f4"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"></path></svg></span><span class="check__text" data-i18n="fat.s8.i4"><strong>第 2 周</strong>：早餐加一份蛋白质（两个鸡蛋、一杯希腊酸奶或一杯豆浆）</span></label>
+          <label class="check"><input type="checkbox" value="f5"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"></path></svg></span><span class="check__text" data-i18n="fat.s8.i5">把含糖饮料换成水、无糖茶或气泡水</span></label>
+          <label class="check"><input type="checkbox" value="f6"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"></path></svg></span><span class="check__text" data-i18n="fat.s8.i6">每天走到 7000 步（手机自带计步就够）</span></label>
+          <label class="check"><input type="checkbox" value="f7"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"></path></svg></span><span class="check__text" data-i18n="fat.s8.i7"><strong>第 3 周</strong>：开始每周两次力量训练，照抄第 4 节的模板</span></label>
+          <label class="check"><input type="checkbox" value="f8"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"></path></svg></span><span class="check__text" data-i18n="fat.s8.i8">每餐蔬菜占到盘子的一半</span></label>
+          <label class="check"><input type="checkbox" value="f9"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"></path></svg></span><span class="check__text" data-i18n="fat.s8.i9">固定起床时间，目标睡满 7 小时</span></label>
+          <label class="check"><input type="checkbox" value="f10"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"></path></svg></span><span class="check__text" data-i18n="fat.s8.i10"><strong>第 4 周</strong>：算出这一周的体重平均值，和起点比较</span></label>
+          <label class="check"><input type="checkbox" value="f11"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"></path></svg></span><span class="check__text" data-i18n="fat.s8.i11">找出最容易破功的场景（加班、饭局、周末），提前准备一个替代方案</span></label>
+          <label class="check"><input type="checkbox" value="f12"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"></path></svg></span><span class="check__text" data-i18n="fat.s8.i12">决定下一个 4 周：同样的节奏再来一轮，还是按第 6 节加一周饮食休息</span></label>
+        </div>
+        <p class="checklist__count"><span data-check-count="fat4w">0 / 12</span> <span data-i18n="fat.s8.done">已完成</span></p>
+
+        <div class="callout callout--warn">
+          <div class="callout__label" data-i18n="common.warn">什么时候该找医生</div>
+          <p data-i18n="fat.s8.doctor">
+            出现以下情况，先去医院，不要自己硬练硬饿：BMI ≥ 30，或 BMI ≥ 27 同时有高血压、糖尿病、脂肪肝；
+            男性腰围 ≥ 90 cm、女性 ≥ 85 cm；三个月内非刻意掉重超过 5%；女性月经消失；持续疲劳、脱发、
+            反复暴食或催吐；以及任何「每天低于 800 千卡」「自行吃减肥药或利尿剂」的想法。
+          </p>
+        </div>
+      </section>
+
+      <!-- 09 -->
+      <section id="refs">
+        <h2><span class="h2num">09</span><span data-i18n="fat.s9.h">参考资料</span></h2>
+        <p class="section-lede" data-i18n="fat.s9.lede">文中数字均来自下列文献或指南。样本量、人群与实验条件不同，结论会有差异——它们描述的是群体平均，不是你的个体命运。</p>
+
+        <ol class="refs">
+          <li>Hall KD, Heymsfield SB, Kemnitz JW, et al. Energy balance and its components: implications for body weight regulation. <em>Am J Clin Nutr.</em> 2012;95(4):989–994.</li>
+          <li>Finkler E, Heymsfield SB, St-Onge MP. Rate of weight loss can be predicted by patient characteristics and intervention strategies. <em>J Acad Nutr Diet.</em> 2012;112(1):75–80.</li>
+          <li>National Institute for Health and Care Excellence. <em>Obesity: identification, assessment and management</em> (CG189). NICE, 2014 (updated 2023).</li>
+          <li>Morton RW, Murphy KT, McKellar SR, et al. A systematic review, meta-analysis and meta-regression of the effect of protein supplementation on resistance training-induced gains in muscle mass and strength. <em>Br J Sports Med.</em> 2018;52(6):376–384.</li>
+          <li>Helms ER, Aragon AA, Fitschen PJ. Evidence-based recommendations for natural bodybuilding contest preparation: nutrition and supplementation. <em>J Int Soc Sports Nutr.</em> 2014;11:20.</li>
+          <li>Nedeltcheva AV, Kilkus JM, Imperial J, et al. Insufficient sleep undermines dietary efforts to reduce adiposity. <em>Ann Intern Med.</em> 2010;153(7):435–441.</li>
+          <li>Schoenfeld BJ, Ogborn D, Krieger JW. Dose-response relationship between weekly resistance training volume and increases in muscle mass. <em>J Sports Sci.</em> 2017;35(11):1073–1082.</li>
+          <li>Bazzano LA, Hu T, Reynolds K, et al. Effects of low-carbohydrate and low-fat diets: a randomized trial. <em>Ann Intern Med.</em> 2014;161(5):309–318.</li>
+          <li>Gardner CD, Trepanowski JF, Del Gobbo LC, et al. Effect of low-fat vs low-carbohydrate diet on 12-month weight loss (DIETFITS). <em>JAMA.</em> 2018;319(7):667–679.</li>
+          <li>Trexler ET, Smith-Ryan AE, Norton LE. Metabolic adaptation to weight loss: implications for the athlete. <em>J Int Soc Sports Nutr.</em> 2014;11:7.</li>
+          <li>Wing RR, Phelan S. Long-term weight loss maintenance. <em>Am J Clin Nutr.</em> 2005;82(1 Suppl):222S–225S.</li>
+          <li>Thomas DT, Erdman KA, Burke LM. Position of the Academy of Nutrition and Dietetics, Dietitians of Canada, and the American College of Sports Medicine: Nutrition and athletic performance. <em>J Acad Nutr Diet.</em> 2016;116(3):501–528.</li>
+        </ol>
+      </section>
+
+      <div class="pager">
+        <a href="index.html">
+          <span class="pager__k" data-i18n="common.prev">上一篇</span>
+          <span class="pager__t" data-i18n="nav.home">首页</span>
+        </a>
+        <a href="muscle-gain.html" style="text-align:right">
+          <span class="pager__k" data-i18n="common.next">下一篇</span>
+          <span class="pager__t" data-i18n="fat.pager.next">增肌增重：先把训练和吃法搞对</span>
+        </a>
+      </div>
+
+    </article>
+  </div>
+</div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-note">
+      <span data-i18n="footer.copy">© 2026 轻与壮 · 可自由分享</span>
+      <a href="index.html" data-i18n="nav.home">首页</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/i18n/common.en.js"></script>
+<script src="assets/js/i18n/fat.en.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/calculators.js"></script>
+</body>
+</html>
